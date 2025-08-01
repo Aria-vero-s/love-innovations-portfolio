@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Innovations</title>
+    <meta name="description"
+        content="Houseboat maintenance, property maintenance, and custom woodwork services.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/globals.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body class="min-h-screen bg-background text-foreground dark">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <button onclick="window.location.href='/'"
+                        class="text-2xl text-foreground tracking-tight hover:text-orange-500 transition-colors">
+                        LOVE INNOVATIONS
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-12">
+                        <div class="flex items-center space-x-12">
+                            <button onclick="window.location.href='/#about'"
+                                class="text-muted-foreground hover:text-orange-500 transition-colors duration-200 tracking-wide">
+                                About
+                            </button>
+                            <button onclick="window.location.href='/#services'"
+                                class="text-muted-foreground hover:text-orange-500 transition-colors duration-200 tracking-wide">
+                                Projects & Services
+                            </button>
+                            <button onclick="window.location.href='/#testimonials'"
+                                class="text-muted-foregroup hover:text-orange-500 transition-colors duration-200 tracking-wide">
+                                Reviews
+                            </button>
+                        </div>
+                        <button onclick="window.location.href='/#contact'"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 transition-all duration-200 tracking-wide">
+                            Contact
+                        </button>
+                        <!-- Dark/Light Mode Toggle -->
+                        <button id="theme-toggle"
+                            class="p-2 text-muted-foreground hover:text-orange-500 transition-colors">
+                            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-foreground hover:text-orange-500">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-4 pt-4 pb-6 space-y-4 bg-background border-t border-border">
+                    <button onclick="window.location.href='/#about'"
+                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                        About
+                    </button>
+                    <button onclick="window.location.href='/#services'"
+                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                        Projects & Services
+                    </button>
+                    <button onclick="window.location.href='/#testimonials'"
+                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                        Reviews
+                    </button>
+                    <button onclick="window.location.href='/#contact'"
+                        class="bg-orange-500 hover:bg-orange-600 text-white w-full py-3 mt-4 tracking-wide">
+                        Contact
+                    </button>
+                    <div class="flex justify-center pt-4">
+                        <button id="mobile-theme-toggle"
+                            class="p-2 text-muted-foreground hover:text-orange-500 transition-colors">
+                            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back to Home Button -->
+    <div class="relative top-20 left-0 right-0 bg-card/95 z-40">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="py-4">
+                <button onclick="window.location.href='/'"
+                    class="flex items-center text-muted-foreground hover:text-orange-500 transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                    <span class="tracking-wide">Back to Home</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-32">
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <!-- Header -->
+                <div class="text-center mb-20 animate-on-scroll">
+                    <div class="space-y-6">
+                        <div class="bespoke-line w-16 h-0.5 bg-orange-500 mx-auto"></div>
+                        <h1 class="text-4xl md:text-5xl text-foreground tracking-tight">
+                            BESPOKE CRAFTSMANSHIP
+                        </h1>
+                        <p class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                            Handcrafted furniture and storage solutions designed for lifetime durability. Each piece
+                            combines traditional techniques with contemporary design.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <!-- Projects will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background border-t border-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <div class="space-y-6">
+                    <div class="text-2xl logo-font text-foreground tracking-tight">LOVE INNOVATIONS</div>
+                    <p class="text-muted-foreground leading-relaxed">
+                        Bespoke woodworking, property care, and boat maintenance tailored for lasting quality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors group">
+                            <i data-lucide="facebook" class="w-5 h-5 text-orange-500 group-hover:text-white"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors group">
+                            <i data-lucide="instagram" class="w-5 h-5 text-orange-500 group-hover:text-white"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors group">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-orange-500 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="space-y-6">
+                    <h4 class="text-foreground tracking-tight">Services</h4>
+                    <ul class="space-y-3 text-muted-foreground">
+                        <li><a href="marine-projects.html" class="hover:text-orange-500 transition-colors">Marine
+                                Engineering</a></li>
+                        <li><a href="property-projects.html" class="hover:text-orange-500 transition-colors">Property
+                                Excellence</a></li>
+                        <li><a href="bespoke-projects.html" class="hover:text-orange-500 transition-colors">Bespoke
+                                Craftsmanship</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <h4 class="text-foreground tracking-tight">Contact</h4>
+                    <div class="space-y-3 text-muted-foreground">
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-orange-500"></i>
+                            <span>+44 7394 065896</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-orange-500"></i>
+                            <span>info@loveinnovations.co.uk</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-orange-500"></i>
+                            <span>North London, England</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+                <div>© 2024 Love Innovations. All rights reserved.</div>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="hover:text-orange-500 transition-colors">Terms of
+                        Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/shared/theme.js"></script>
+    <script src="./js/shared/navigation.js"></script>
+    <script src="./js/bespoke-projects.js"></script>
+</body>
+
+</html>

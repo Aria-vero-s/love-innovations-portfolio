@@ -1,0 +1,32 @@
+{
+  "id": "dining-table",
+  "title": "Bespoke Walnut Dining Table",
+  "category": "bespoke",
+  "description": "Custom-designed dining table crafted from premium walnut with intricate joinery details.",
+  "longDescription": "A stunning dining table crafted from a single piece of premium walnut, featuring traditional joinery techniques and a contemporary design that will last for generations.",
+  "mainImage": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+  "images": [
+    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1559300504-8005da96e6be?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1558618047-3c8c76ca22ad?w=800&h=600&fit=crop"
+  ],
+  "details": {
+    "duration": "8 weeks",
+    "client": "Private Collector",
+    "location": "Workshop - Dorset",
+    "value": "£12,000"
+  },
+  "features": [
+    "Single-piece walnut construction",
+    "Traditional mortise and tenon joinery",
+    "Hand-rubbed oil finish",
+    "Seats up to 10 people",
+    "Matching bench seating",
+    "Lifetime guarantee"
+  ],
+  "testimonial": {
+    "text": "This table is a masterpiece. The craftsmanship and attention to detail are extraordinary. It's the centerpiece of our dining room.",
+    "author": "Margaret Stevens",
+    "role": "Art Collector"
+  }
+}

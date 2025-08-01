@@ -1,0 +1,26 @@
+{
+  "id": "garden-office",
+  "title": "Contemporary Garden Office",
+  "category": "property",
+  "description": "Modern garden office construction with sustainable materials and contemporary design.",
+  "longDescription": "A bespoke garden office designed and built using sustainable materials, featuring contemporary design elements and full connectivity for modern working requirements.",
+  "mainImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop",
+  "images": [
+    "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+  ],
+  "details": {
+    "duration": "6 weeks",
+    "client": "Creative Professional",
+    "location": "Cotswolds",
+    "value": "£35,000"
+  },
+  "features": [
+    "Sustainable timber construction",
+    "Triple-glazed windows",
+    "Underfloor heating system",
+    "Full electrical installation",
+    "High-speed internet connectivity",
+    "Integrated storage solutions"
+  ]
+}

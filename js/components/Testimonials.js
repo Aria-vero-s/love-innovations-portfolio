@@ -1,70 +1,132 @@
-function createTestimonials() {
-    const testimonials = [
-        {
-            name: "Sarah Mitchell",
-            role: "Houseboat Owner",
-            content: "Ben's work on my houseboat was exceptional. His engineering background really showed in his creative problem solving and my space feels so much bigger.",
-            rating: 5
-        },
-        {
-            name: "David Thompson", 
-            role: "Property Developer",
-            content: "Working with Ben on our apartment building renovation was a pleasure. A lot of fixing needed to be done and Ben was there every step of the way.",
-            rating: 5
-        },
-        {
-            name: "Emma Williams",
-            role: "Homeowner", 
-            content: "The bespoke furniture Ben created for us is absolutely beautiful. You can see the care and precision in every joint and finish.",
-            rating: 5
-        }
-    ];
+export default class Testimonials {
+    constructor() {}
 
-    return `
-        <section id="testimonials" class="py-24 bg-card">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <!-- Header -->
-                <div class="text-center mb-20 animate-on-scroll animate-fade-in-up">
-                    <div class="space-y-6">
-                        <div class="w-16 h-0.5 bg-orange-500 mx-auto"></div>
-                        <h2 class="text-4xl md:text-5xl text-foreground tracking-tight">
-                            CLIENT TESTIMONIALS
-                        </h2>
-                        <p class="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                            What the clients are saying
-                        </p>
-                    </div>
+    async render() {
+        const testimonials = [
+            {
+                rating: 5,
+                text: "Ben's engineering background really shows in his work. The attention to detail on our boat's carbon fiber repairs was exceptional. Professional, reliable, and incredibly skilled.",
+                author: "James Mitchell",
+                role: "Houseboat Owner",
+                initials: "JM"
+            },
+            {
+                rating: 5,
+                text: "Transformed our Victorian property while maintaining its character. Ben's approach combines traditional craftsmanship with modern engineering - exactly what we needed.",
+                author: "Sarah Thompson",
+                role: "Property Developer",
+                initials: "ST"
+            },
+            {
+                rating: 5,
+                text: "The dining table Ben created is a masterpiece. His precision and attention to detail are remarkable. It's clear he takes pride in every aspect of his craft.",
+                author: "Robert Chen",
+                role: "Homeowner",
+                initials: "RC"
+            }
+        ];
+
+        return `
+            <!-- Header -->
+            <div class="text-center mb-20 animate-on-scroll">
+                <div class="space-y-6">
+                    <div class="testimonials-line w-16 h-0.5 bg-orange-500 mx-auto"></div>
+                    <h2 class="text-4xl md:text-5xl text-foreground tracking-tight">
+                        CLIENT REVIEWS
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                        What the clients say about working with Love Innovations
+                    </p>
                 </div>
+            </div>
 
-                <!-- Testimonials Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    ${testimonials.map((testimonial, index) => `
-                        <div class="border border-border shadow-sm bg-background p-8 space-y-6 animate-on-scroll animate-fade-in-up delay-${200 + index * 200}">
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                ${testimonials.map((testimonial, index) => `
+                    <div class="animate-on-scroll delay-${300 + (index * 100)}">
+                        <div class="bg-card border border-border p-8 h-full">
                             <!-- Rating -->
-                            <div class="flex space-x-1">
-                                ${Array(testimonial.rating).fill(0).map(() => `
-                                    <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                    </svg>
-                                `).join('')}
+                            <div class="flex items-center mb-6">
+                                ${Array(testimonial.rating).fill(0).map(() => 
+                                    '<i data-lucide="star" class="w-5 h-5 text-orange-500 fill-current"></i>'
+                                ).join('')}
                             </div>
                             
-                            <!-- Content -->
-                            <blockquote class="text-muted-foreground leading-relaxed">
-                                "${testimonial.content}"
+                            <!-- Testimonial Text -->
+                            <blockquote class="text-muted-foreground leading-relaxed mb-6 italic">
+                                "${testimonial.text}"
                             </blockquote>
                             
                             <!-- Author -->
-                            <div>
-                                <div class="text-foreground tracking-tight">${testimonial.name}</div>
-                                <div class="text-sm text-muted-foreground">${testimonial.role}</div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mr-4">
+                                    <span class="text-orange-500 font-medium">${testimonial.initials}</span>
+                                </div>
+                                <div>
+                                    <div class="text-foreground">${testimonial.author}</div>
+                                    <div class="text-sm text-muted-foreground">${testimonial.role}</div>
+                                </div>
                             </div>
                         </div>
-                    `).join('')}
+                    </div>
+                `).join('')}
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="border-t border-border pt-16 animate-on-scroll delay-600">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="space-y-4">
+                        <div class="text-4xl text-orange-500">9+</div>
+                        <div class="text-foreground tracking-tight">Years Experience</div>
+                        <div class="text-sm text-muted-foreground">Across marine, property & bespoke projects</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-4xl text-orange-500">100%</div>
+                        <div class="text-foreground tracking-tight">Client Satisfaction</div>
+                        <div class="text-sm text-muted-foreground">Every project completed to the highest standard</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-4xl text-orange-500">50+</div>
+                        <div class="text-foreground tracking-tight">Projects Completed</div>
+                        <div class="text-sm text-muted-foreground">From minor repairs to major installations</div>
+                    </div>
                 </div>
             </div>
-        </section>
-    `;
-}
+        `;
+    }
 
-window.createTestimonials = createTestimonials;
+    bindEvents() {
+        // Initialize scroll animations
+        this.initScrollAnimations();
+    }
+
+    initScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    
+                    // Special handling for testimonials line
+                    const testimonialsLine = entry.target.querySelector('.testimonials-line');
+                    if (testimonialsLine) {
+                        setTimeout(() => {
+                            testimonialsLine.style.width = '4rem';
+                            testimonialsLine.style.transition = 'width 0.8s ease-out';
+                        }, 200);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+}

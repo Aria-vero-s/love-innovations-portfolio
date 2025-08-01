@@ -52,68 +52,6 @@ function initializeInteractions() {
             }
         });
     });
-    
-    // Initialize video controls if video exists
-    initializeVideoControls();
-}
-
-// Initialize video controls for featured video
-function initializeVideoControls() {
-    const video = document.getElementById('featuredVideo');
-    const playButton = document.getElementById('playButton');
-    
-    if (video && playButton) {
-        // Remove existing event listeners to prevent duplicates
-        video.removeEventListener('pause', handleVideoPause);
-        video.removeEventListener('ended', handleVideoEnded);
-        video.removeEventListener('play', handleVideoPlay);
-        
-        // Add event listeners
-        video.addEventListener('pause', handleVideoPause);
-        video.addEventListener('ended', handleVideoEnded);
-        video.addEventListener('play', handleVideoPlay);
-        
-        // Handle fullscreen changes
-        document.removeEventListener('fullscreenchange', handleFullscreenChange);
-        document.addEventListener('fullscreenchange', handleFullscreenChange);
-    }
-}
-
-// Event handlers for video controls
-function handleVideoPause() {
-    const playButton = document.getElementById('playButton');
-    if (playButton) playButton.style.display = 'flex';
-}
-
-function handleVideoEnded() {
-    const playButton = document.getElementById('playButton');
-    if (playButton) playButton.style.display = 'flex';
-}
-
-function handleVideoPlay() {
-    const playButton = document.getElementById('playButton');
-    if (playButton) playButton.style.display = 'none';
-}
-
-function handleFullscreenChange() {
-    const fullscreenBtn = document.getElementById('fullscreenBtn');
-    if (fullscreenBtn) {
-        if (document.fullscreenElement) {
-            // In fullscreen - change icon to exit fullscreen
-            fullscreenBtn.innerHTML = `
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            `;
-        } else {
-            // Not in fullscreen - change icon back to fullscreen
-            fullscreenBtn.innerHTML = `
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/>
-                </svg>
-            `;
-        }
-    }
 }
 
 // Handle form submissions
@@ -167,7 +105,6 @@ function debounce(func, wait) {
 // Export to global scope
 window.initializeScrollAnimations = initializeScrollAnimations;
 window.initializeInteractions = initializeInteractions;
-window.initializeVideoControls = initializeVideoControls;
 window.handleFormSubmit = handleFormSubmit;
 window.scrollToContact = scrollToContact;
 window.createImageWithFallback = createImageWithFallback;

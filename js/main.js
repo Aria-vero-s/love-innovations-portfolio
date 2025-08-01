@@ -1,340 +1,438 @@
-// Application state
-let appState = {
-    currentView: 'home',
-    currentProjectId: '',
-    theme: 'light' // default theme changed to light
-};
-
-// Initialize theme from localStorage or default to light
-function initializeTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        appState.theme = savedTheme;
-    } else {
-        // Default to light mode if no saved preference
-        appState.theme = 'light';
+// Main JavaScript application
+class LoveInnovationsApp {
+    constructor() {
+        this.currentView = 'home';
+        this.currentProjectId = '';
+        this.components = {};
+        this.init();
     }
-    applyTheme(appState.theme);
-}
 
-// Apply theme to document
-function applyTheme(theme) {
-    const html = document.documentElement;
-    const body = document.body;
-    
-    if (theme === 'dark') {
-        html.classList.add('dark');
-        body.classList.add('dark');
-    } else {
-        html.classList.remove('dark');
-        body.classList.remove('dark');
-    }
-    
-    // Debug logging
-    console.log('Applied theme:', theme);
-    console.log('HTML classes:', html.className);
-    console.log('Body classes:', body.className);
-}
-
-// Toggle theme function
-function toggleTheme() {
-    const newTheme = appState.theme === 'dark' ? 'light' : 'dark';
-    appState.theme = newTheme;
-    localStorage.setItem('theme', newTheme);
-    applyTheme(newTheme);
-    
-    // Update theme toggle button icons
-    updateThemeToggleIcons();
-    
-    // Debug logging
-    console.log('Toggled to theme:', newTheme);
-}
-
-// Update theme toggle button icons
-function updateThemeToggleIcons() {
-    const sunIcons = document.querySelectorAll('[data-theme-icon="sun"]');
-    const moonIcons = document.querySelectorAll('[data-theme-icon="moon"]');
-    
-    if (appState.theme === 'dark') {
-        sunIcons.forEach(icon => icon.classList.add('hidden'));
-        moonIcons.forEach(icon => icon.classList.remove('hidden'));
-    } else {
-        sunIcons.forEach(icon => icon.classList.remove('hidden'));
-        moonIcons.forEach(icon => icon.classList.add('hidden'));
-    }
-}
-
-// State management functions
-function setState(newState) {
-    appState = { ...appState, ...newState };
-    render();
-}
-
-// Navigation handlers
-function handleNavigateToProjects(serviceType) {
-    switch (serviceType) {
-        case 'marine':
-            setState({ currentView: 'marine-projects' });
-            break;
-        case 'property':
-            setState({ currentView: 'property-projects' });
-            break;
-        case 'bespoke':
-            setState({ currentView: 'bespoke-projects' });
-            break;
-    }
-    // Scroll to top when navigating to project pages
-    setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-}
-
-function handleBackToHome() {
-    setState({ currentView: 'home' });
-    // Scroll to top when returning home
-    setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-}
-
-function handleNavigateToContact() {
-    setState({ currentView: 'home' });
-    // Navigate to home and scroll to contact
-    setTimeout(() => {
-        const element = document.getElementById('contact');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+    async init() {
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
         }
-    }, 200);
-}
 
-function handleProjectSelect(projectId) {
-    console.log('handleProjectSelect called with ID:', projectId);  // Debug logging
-    setState({ 
-        currentProjectId: projectId,
-        currentView: 'project-detail' 
-    });
-    // Scroll to top when navigating to project detail
-    setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-}
-
-function handleBackToProjects() {
-    // Use the data structure to determine which project page to return to
-    const category = getProjectCategory(appState.currentProjectId);
-    
-    let targetView;
-    switch (category) {
-        case 'marine':
-            targetView = 'marine-projects';
-            break;
-        case 'property':
-            targetView = 'property-projects';
-            break;
-        case 'bespoke':
-            targetView = 'bespoke-projects';
-            break;
-        default:
-            targetView = 'marine-projects';
-            break;
-    }
-    
-    setState({ currentView: targetView });
-    // Scroll to top when returning to project pages
-    setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-}
-
-// Render function
-function render() {
-    const app = document.getElementById('app');
-    const { currentView, currentProjectId } = appState;
-    
-    let content = '';
-    
-    // Navigation
-    if (currentView === 'home') {
-        content += createNavigation();
-    } else {
-        content += `
-            <nav class="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border z-50">
-                <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                    <div class="flex justify-between items-center h-20">
-                        <button onclick="handleBackToHome()" class="text-2xl text-foreground tracking-tight hover:text-orange-500 transition-colors">
-                            LOVE INNOVATIONS
-                        </button>
-                        <div class="flex items-center space-x-4">
-                            <!-- Theme Toggle -->
-                            <button 
-                                onclick="toggleTheme()"
-                                class="p-2 text-foreground hover:text-orange-500 transition-colors hover:bg-muted rounded-lg"
-                                title="Toggle theme"
-                            >
-                                <!-- Sun icon for light mode -->
-                                <svg data-theme-icon="sun" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <circle cx="12" cy="12" r="5"></circle>
-                                    <path d="m12 2 0 2"></path>
-                                    <path d="m12 20 0 2"></path>
-                                    <path d="m4.93 4.93 1.41 1.41"></path>
-                                    <path d="m17.66 17.66 1.41 1.41"></path>
-                                    <path d="m2 12 2 0"></path>
-                                    <path d="m20 12 2 0"></path>
-                                    <path d="m6.34 17.66-1.41 1.41"></path>
-                                    <path d="m19.07 4.93-1.41 1.41"></path>
-                                </svg>
-                                <!-- Moon icon for dark mode -->
-                                <svg data-theme-icon="moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                                </svg>
-                            </button>
-                            <button onclick="handleBackToHome()" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 text-sm tracking-wide transition-all duration-200">
-                                Back to Home
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        `;
-    }
-    
-    // Main content based on current view
-    switch (currentView) {
-        case 'marine-projects':
-            content += createMarineProjects();
-            break;
-        case 'property-projects':
-            content += createPropertyProjects();
-            break;
-        case 'bespoke-projects':
-            content += createBespokeProjects();
-            break;
-        case 'project-detail':
-            content += createProjectDetail(currentProjectId);
-            // Initialize project detail functionality after rendering
-            setTimeout(() => {
-                initializeProjectDetail(currentProjectId);
-            }, 0);
-            break;
-        default:
-            // Home view
-            content += createHero();
-            content += createAbout();
-            content += createServices();
-            content += createProjects();
-            content += createTestimonials();
-            content += createContact();
-            break;
-    }
-    
-    app.innerHTML = content;
-    
-    // Initialize scroll animations and other interactions
-    initializeScrollAnimations();
-    initializeInteractions();
-    
-    // Update theme toggle icons after render
-    setTimeout(() => {
-        updateThemeToggleIcons();
-        // Initialize video controls for featured video if it exists
-        initializeVideoControls();
-    }, 0);
-}
-
-// Modal functionality for About section
-function showMoreAboutModal() {
-    const modal = document.getElementById('more-about-modal');
-    if (modal) {
-        modal.classList.remove('hidden');
-        // Prevent body scroll when modal is open
-        document.body.style.overflow = 'hidden';
+        // Load all components
+        await this.loadComponents();
         
-        // Add click outside to close
-        modal.addEventListener('click', function(e) {
+        // Initialize navigation
+        this.initNavigation();
+        
+        // Initialize mobile menu
+        this.initMobileMenu();
+        
+        // Initialize hero animations
+        this.initHeroAnimations();
+        
+        // Initialize video player
+        this.initVideoPlayer();
+        
+        // Render initial view
+        this.renderCurrentView();
+    }
+
+    async loadComponents() {
+        // Load component modules
+        const componentModules = [
+            'About',
+            'Services', 
+            'Projects',
+            'Testimonials',
+            'Contact',
+            'MarineProjects',
+            'PropertyProjects',
+            'BespokeProjects',
+            'ProjectDetail'
+        ];
+
+        for (const moduleName of componentModules) {
+            try {
+                const module = await import(`./components/${moduleName}.js`);
+                this.components[moduleName] = new module.default();
+            } catch (error) {
+                console.error(`Failed to load component ${moduleName}:`, error);
+            }
+        }
+    }
+
+    initNavigation() {
+        // Handle all navigation links
+        document.addEventListener('click', (e) => {
+            const target = e.target.closest('[data-section]');
+            if (target) {
+                e.preventDefault();
+                const sectionId = target.getAttribute('data-section');
+                this.scrollToSection(sectionId);
+            }
+        });
+
+        // Home logo clicks
+        document.getElementById('home-logo')?.addEventListener('click', () => {
+            this.handleBackToHome();
+        });
+
+        // Sub-navigation back to home button
+        document.getElementById('back-to-home-btn')?.addEventListener('click', () => {
+            this.handleBackToHome();
+        });
+
+        // Contact from project button
+        document.getElementById('contact-from-project')?.addEventListener('click', () => {
+            this.handleNavigateToContact();
+        });
+    }
+
+    initMobileMenu() {
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        let isOpen = false;
+
+        toggle?.addEventListener('click', () => {
+            isOpen = !isOpen;
+            if (isOpen) {
+                menu.classList.remove('hidden');
+                toggle.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+            } else {
+                menu.classList.add('hidden');
+                toggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+            }
+            
+            // Reinitialize icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Close mobile menu when clicking nav links
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.nav-link') && isOpen) {
+                isOpen = false;
+                menu.classList.add('hidden');
+                toggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }
+        });
+    }
+
+    initHeroAnimations() {
+        // Hero entrance animations
+        const heroElements = {
+            bg: document.querySelector('.hero-bg'),
+            overlay: document.querySelector('.hero-overlay'),
+            title: document.querySelector('.hero-title'),
+            line: document.querySelector('.hero-line'),
+            subtitle: document.querySelector('.hero-subtitle'),
+            buttons: document.querySelector('.hero-buttons'),
+            indicator: document.querySelector('.scroll-indicator')
+        };
+
+        // Trigger animations on load
+        setTimeout(() => {
+            if (heroElements.bg) {
+                heroElements.bg.style.transform = 'scale(1)';
+                heroElements.bg.style.transition = 'transform 1.5s ease-out';
+            }
+        }, 100);
+
+        setTimeout(() => {
+            if (heroElements.overlay) {
+                heroElements.overlay.style.opacity = '1';
+                heroElements.overlay.style.transition = 'opacity 1s ease-out';
+            }
+        }, 600);
+
+        setTimeout(() => {
+            if (heroElements.title) {
+                heroElements.title.style.opacity = '1';
+                heroElements.title.style.transform = 'translateY(0)';
+                heroElements.title.style.transition = 'opacity 1.2s ease-out, transform 1.2s ease-out';
+            }
+        }, 1000);
+
+        setTimeout(() => {
+            if (heroElements.line) {
+                heroElements.line.style.width = '6rem';
+                heroElements.line.style.transition = 'width 0.8s ease-out';
+            }
+        }, 1500);
+
+        setTimeout(() => {
+            if (heroElements.subtitle) {
+                heroElements.subtitle.style.opacity = '1';
+                heroElements.subtitle.style.transform = 'translateY(0)';
+                heroElements.subtitle.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+            }
+        }, 1300);
+
+        setTimeout(() => {
+            if (heroElements.buttons) {
+                heroElements.buttons.style.opacity = '1';
+                heroElements.buttons.style.transform = 'translateY(0)';
+                heroElements.buttons.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+            }
+        }, 1600);
+
+        setTimeout(() => {
+            if (heroElements.indicator) {
+                heroElements.indicator.style.opacity = '1';
+                heroElements.indicator.style.transform = 'translateX(-50%) translateY(0)';
+                heroElements.indicator.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+            }
+        }, 2000);
+    }
+
+    initVideoPlayer() {
+        const closeFullscreen = document.getElementById('close-fullscreen');
+        const modal = document.getElementById('video-fullscreen-modal');
+        const fullscreenVideo = document.getElementById('fullscreen-video');
+
+        closeFullscreen?.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            fullscreenVideo.pause();
+            fullscreenVideo.src = '';
+        });
+
+        // Close on modal background click
+        modal?.addEventListener('click', (e) => {
             if (e.target === modal) {
-                hideMoreAboutModal();
+                modal.classList.add('hidden');
+                fullscreenVideo.pause();
+                fullscreenVideo.src = '';
             }
         });
-        
-        // Add escape key to close
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                hideMoreAboutModal();
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+                fullscreenVideo.pause();
+                fullscreenVideo.src = '';
             }
         });
     }
-}
 
-function hideMoreAboutModal() {
-    const modal = document.getElementById('more-about-modal');
-    if (modal) {
-        modal.classList.add('hidden');
-        // Restore body scroll
-        document.body.style.overflow = '';
+    scrollToSection(sectionId) {
+        if (this.currentView !== 'home') {
+            this.handleBackToHome();
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 200);
+        } else {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+
+    handleNavigateToProjects(serviceType) {
+        switch (serviceType) {
+            case 'marine':
+                this.currentView = 'marine-projects';
+                break;
+            case 'property':
+                this.currentView = 'property-projects';
+                break;
+            case 'bespoke':
+                this.currentView = 'bespoke-projects';
+                break;
+        }
+        this.renderCurrentView();
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+    }
+
+    handleBackToHome() {
+        this.currentView = 'home';
+        this.renderCurrentView();
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+    }
+
+    handleNavigateToContact() {
+        this.currentView = 'home';
+        this.renderCurrentView();
+        setTimeout(() => {
+            const element = document.getElementById('contact');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 200);
+    }
+
+    handleProjectSelect(projectId) {
+        this.currentProjectId = projectId;
+        this.currentView = 'project-detail';
+        this.renderCurrentView();
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+    }
+
+    handleBackToProjects() {
+        // Determine which project page to return to based on the current project
+        if (this.currentProjectId.includes('piano') || this.currentProjectId.includes('chest') || 
+            this.currentProjectId.includes('furniture') || this.currentProjectId.includes('dining') || 
+            this.currentProjectId.includes('wardrobe') || this.currentProjectId.includes('kitchen-cabinets') || 
+            this.currentProjectId.includes('floating') || this.currentProjectId.includes('antique')) {
+            this.currentView = 'bespoke-projects';
+        } else if (this.currentProjectId.includes('property') || this.currentProjectId.includes('renovation') || 
+                   this.currentProjectId.includes('luxury') || this.currentProjectId.includes('structural') || 
+                   this.currentProjectId.includes('bathroom') || this.currentProjectId.includes('kitchen-extension') || 
+                   this.currentProjectId.includes('period') || this.currentProjectId.includes('commercial')) {
+            this.currentView = 'property-projects';
+        } else {
+            this.currentView = 'marine-projects';
+        }
+        this.renderCurrentView();
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+    }
+
+    renderCurrentView() {
+        // Hide all views
+        document.querySelectorAll('.view').forEach(view => {
+            view.classList.remove('active');
+        });
+
+        // Show/hide navigation based on current view
+        const homeNav = document.getElementById('home-navigation');
+        const subNav = document.getElementById('project-sub-navigation');
+        const footer = document.getElementById('site-footer');
+
+        if (this.currentView === 'home') {
+            homeNav.classList.remove('hidden');
+            subNav.classList.add('hidden');
+            footer.classList.remove('hidden');
+            document.getElementById('home-view').classList.add('active');
+            
+            // Render home sections
+            this.renderHomeSections();
+        } else {
+            homeNav.classList.add('hidden');
+            subNav.classList.remove('hidden');
+            footer.classList.add('hidden');
+            
+            // Show appropriate project view
+            const viewElement = document.getElementById(`${this.currentView}-view`);
+            if (viewElement) {
+                viewElement.classList.add('active');
+                this.renderProjectView();
+            }
+        }
+    }
+
+    async renderHomeSections() {
+        // Render About section
+        if (this.components.About) {
+            const aboutContainer = document.querySelector('#about .max-w-7xl');
+            aboutContainer.innerHTML = await this.components.About.render();
+            this.components.About.bindEvents();
+        }
+
+        // Render Services section
+        if (this.components.Services) {
+            const servicesContainer = document.querySelector('#services .max-w-7xl');
+            servicesContainer.innerHTML = await this.components.Services.render();
+            this.components.Services.bindEvents((serviceType) => {
+                this.handleNavigateToProjects(serviceType);
+            });
+        }
+
+        // Render Featured Project section
+        if (this.components.Projects) {
+            const projectsContainer = document.querySelector('#project .max-w-7xl');
+            projectsContainer.innerHTML = await this.components.Projects.render();
+            this.components.Projects.bindEvents();
+        }
+
+        // Render Testimonials section
+        if (this.components.Testimonials) {
+            const testimonialsContainer = document.querySelector('#testimonials .max-w-7xl');
+            testimonialsContainer.innerHTML = await this.components.Testimonials.render();
+            this.components.Testimonials.bindEvents();
+        }
+
+        // Render Contact section
+        if (this.components.Contact) {
+            const contactContainer = document.querySelector('#contact .max-w-7xl');
+            contactContainer.innerHTML = await this.components.Contact.render();
+            this.components.Contact.bindEvents();
+        }
+
+        // Reinitialize icons after rendering
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    }
+
+    async renderProjectView() {
+        let component;
+        let container;
+
+        switch (this.currentView) {
+            case 'marine-projects':
+                component = this.components.MarineProjects;
+                container = document.querySelector('#marine-projects-view > div');
+                break;
+            case 'property-projects':
+                component = this.components.PropertyProjects;
+                container = document.querySelector('#property-projects-view > div');
+                break;
+            case 'bespoke-projects':
+                component = this.components.BespokeProjects;
+                container = document.querySelector('#bespoke-projects-view > div');
+                break;
+            case 'project-detail':
+                component = this.components.ProjectDetail;
+                container = document.querySelector('#project-detail-view > div');
+                break;
+        }
+
+        if (component && container) {
+            if (this.currentView === 'project-detail') {
+                container.innerHTML = await component.render(this.currentProjectId);
+                component.bindEvents(
+                    () => this.handleBackToProjects(),
+                    () => this.handleNavigateToContact()
+                );
+            } else {
+                container.innerHTML = await component.render();
+                component.bindEvents(
+                    () => this.handleBackToHome(),
+                    (projectId) => this.handleProjectSelect(projectId)
+                );
+            }
+        }
+
+        // Reinitialize icons after rendering
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 }
 
-// Scroll to contact function
-function scrollToContact() {
-    const contactElement = document.getElementById('contact');
-    if (contactElement) {
-        contactElement.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-// Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
-    initializeTheme();
-    render();
+// Initialize the application when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    window.app = new LoveInnovationsApp();
 });
 
-// Video control functions for featured video
-function toggleVideoPlay() {
-    const video = document.getElementById('featuredVideo');
-    const playButton = document.getElementById('playButton');
-    
-    if (video && playButton) {
-        if (video.paused) {
-            video.play();
-            playButton.style.display = 'none';
-        } else {
-            video.pause();
-            playButton.style.display = 'flex';
-        }
+// Handle page visibility change to restart animations if needed
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+        setTimeout(() => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }, 100);
     }
-}
-
-function toggleFullscreen() {
-    const video = document.getElementById('featuredVideo');
-    
-    if (video) {
-        if (!document.fullscreenElement) {
-            video.requestFullscreen().then(() => {
-                // Video will continue playing in fullscreen
-                if (video.paused) {
-                    video.play();
-                }
-            }).catch(err => {
-                console.log('Error attempting to enable fullscreen:', err);
-            });
-        } else {
-            document.exitFullscreen().catch(err => {
-                console.log('Error attempting to exit fullscreen:', err);
-            });
-        }
-    }
-}
-
-// Export functions to global scope for onclick handlers
-window.handleNavigateToProjects = handleNavigateToProjects;
-window.handleBackToHome = handleBackToHome;
-window.handleNavigateToContact = handleNavigateToContact;
-window.handleProjectSelect = handleProjectSelect;
-window.handleBackToProjects = handleBackToProjects;
-window.toggleTheme = toggleTheme;
-window.showMoreAboutModal = showMoreAboutModal;
-window.hideMoreAboutModal = hideMoreAboutModal;
-window.scrollToContact = scrollToContact;
-window.toggleVideoPlay = toggleVideoPlay;
-window.toggleFullscreen = toggleFullscreen;
+});

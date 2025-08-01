@@ -1,192 +1,261 @@
-function createContact() {
-    return `
-        <section id="contact" class="py-24 bg-card">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <!-- Header -->
-                <div class="text-center mb-20 animate-on-scroll animate-fade-in-up">
-                    <div class="space-y-6">
-                        <div class="w-16 h-0.5 bg-orange-500 mx-auto"></div>
-                        <h2 class="text-4xl md:text-5xl text-foreground tracking-tight">
-                            START YOUR PROJECT
-                        </h2>
-                        <p class="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                            Ready to bring precision engineering and artisan craftsmanship to your next project?
-                        </p>
-                    </div>
-                </div>
+export default class Contact {
+    constructor() {}
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <!-- Contact Information -->
-                    <div class="space-y-8 animate-on-scroll animate-fade-in-left delay-200">
-                        <div class="space-y-6">
-                            <h3 class="text-2xl text-foreground tracking-tight">Get In Touch</h3>
-                            <p class="text-muted-foreground leading-relaxed">
-                                Every project begins with a conversation. Let's discuss how we can bring engineering excellence and craftsman quality to your vision.
-                            </p>
-                        </div>
-
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="p-3 bg-orange-500 text-white">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-foreground mb-1">Email</h4>
-                                    <a href="mailto:benjaminlove@hotmail.co.uk" class="text-muted-foreground hover:text-orange-500 transition-colors">
-                                        benjaminlove@hotmail.co.uk
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="p-3 bg-orange-500 text-white">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-foreground mb-1">Phone</h4>
-                                    <a href="tel:+447983620380" class="text-muted-foreground hover:text-orange-500 transition-colors">
-                                        +44 7983 620380
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="p-3 bg-orange-500 text-white">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-foreground mb-1">Service Area</h4>
-                                    <p class="text-muted-foreground">London, England, UK</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="p-3 bg-orange-500 text-white">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-foreground mb-1">Response Time</h4>
-                                    <p class="text-muted-foreground">Within 24 hours</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Why Choose Section -->
-                        <div class="border border-border shadow-sm bg-background p-8">
-                            <h4 class="text-xl text-foreground mb-6 tracking-tight">Engineering Excellence</h4>
-                            <div class="grid grid-cols-1 gap-4">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                                    <span class="text-muted-foreground">BSc Civil Engineering qualification</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                                    <span class="text-muted-foreground">9+ years professional experience</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                                    <span class="text-muted-foreground">Marine & property specialization</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                                    <span class="text-muted-foreground">Bespoke solutions for every project</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                                    <span class="text-muted-foreground">Precision engineering approach</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                                    <span class="text-muted-foreground">Artisan attention to detail</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Form -->
-                    <div class="border border-border shadow-sm bg-background p-8 animate-on-scroll animate-fade-in-right delay-400">
-                        <form onsubmit="handleFormSubmit(event)" class="space-y-6">
-                            <div class="space-y-4">
-                                <h3 class="text-xl text-foreground tracking-tight">Project Enquiry</h3>
-                                <p class="text-muted-foreground">Tell us about your project and we'll get back to you within 24 hours.</p>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <input
-                                        type="text"
-                                        placeholder="First Name"
-                                        class="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:border-orange-500 focus:ring-0 transition-colors"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <input
-                                        type="text"
-                                        placeholder="Last Name"
-                                        class="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:border-orange-500 focus:ring-0 transition-colors"
-                                        required
-                                    />
-                                </div>
-                            </div>
-
-                            <div>
-                                <input
-                                    type="email"
-                                    placeholder="Email Address"
-                                    class="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:border-orange-500 focus:ring-0 transition-colors"
-                                    required
-                                />
-                            </div>
-
-                            <div>
-                                <input
-                                    type="tel"
-                                    placeholder="Phone Number"
-                                    class="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:border-orange-500 focus:ring-0 transition-colors"
-                                />
-                            </div>
-
-                            <div>
-                                <textarea
-                                    placeholder="Tell us about your project requirements, timeline, and any specific details..."
-                                    rows="6"
-                                    class="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:border-orange-500 focus:ring-0 transition-colors resize-none"
-                                    required
-                                ></textarea>
-                            </div>
-
-                            <button 
-                                type="submit"
-                                class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 tracking-wide transition-all duration-300"
-                            >
-                                SEND ENQUIRY
-                            </button>
-
-                            <p class="text-sm text-muted-foreground text-center">
-                                By submitting this form, you agree to be contacted about your project enquiry.
-                            </p>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <div class="mt-20 pt-8 border-t border-border text-center space-y-2">
-                    <p class="text-muted-foreground">&copy; 2025 Love Innovations. All rights reserved.</p>
-                    <p class="text-sm text-muted-foreground">Website created by Ariane Saulnier</p>
+    async render() {
+        return `
+            <!-- Header -->
+            <div class="text-center mb-20 animate-on-scroll">
+                <div class="space-y-6">
+                    <div class="contact-line w-16 h-0.5 bg-orange-500 mx-auto"></div>
+                    <h2 class="text-4xl md:text-5xl text-foreground tracking-tight">
+                        GET IN TOUCH
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                        Ready to discuss your project? Let's start with a conversation about your vision and requirements.
+                    </p>
                 </div>
             </div>
-        </section>
-    `;
-}
 
-window.createContact = createContact;
+            <!-- Contact Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Information -->
+                <div class="animate-on-scroll delay-300">
+                    <div class="space-y-8">
+
+                        <!-- Contact Methods -->
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-orange-500/10 border border-orange-500/20 mt-1">
+                                    <i data-lucide="phone" class="w-5 h-5 text-orange-500"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="text-muted-foreground">+44 7394 065896</div>
+                                    <div class="text-sm text-muted-foreground">Available 9AM - 6PM, Mon - Fri</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-orange-500/10 border border-orange-500/20 mt-1">
+                                    <i data-lucide="mail" class="w-5 h-5 text-orange-500"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="text-muted-foreground">info@loveinnovations.co.uk</div>
+                                    <div class="text-sm text-muted-foreground">Response within 24 hours</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-orange-500/10 border border-orange-500/20 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-orange-500"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="text-muted-foreground">North London, England</div>
+                                    <div class="text-sm text-muted-foreground">Travel available for larger projects</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="animate-on-scroll delay-400">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm text-muted-foreground mb-2">Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    class="w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
+                                    placeholder="Your full name"
+                                >
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm text-muted-foreground mb-2">Email *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    class="w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
+                                    placeholder="your.email@example.com"
+                                >
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm text-muted-foreground mb-2">Phone</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
+                                placeholder="+44 7XXX XXXXXX"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm text-muted-foreground mb-2">Project Details *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="5" 
+                                required 
+                                class="w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors resize-vertical"
+                                placeholder="Please describe your project in detail. Include any specific requirements, materials preferences, or questions you have..."
+                            ></textarea>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <input 
+                                type="checkbox" 
+                                id="consent" 
+                                name="consent" 
+                                required 
+                                class="mt-1 text-orange-500 focus:ring-orange-500 border-border"
+                            >
+                            <label for="consent" class="text-sm text-muted-foreground">
+                                I consent to being contacted about my project enquiry. Your details will be kept secure and not shared with third parties. *
+                            </label>
+                        </div>
+
+                        <button 
+                            type="submit" 
+                            class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 px-6 tracking-wide transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                            id="submit-btn"
+                        >
+                            <span class="flex items-center justify-center space-x-2">
+                                <span>SEND MESSAGE</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        `;
+    }
+
+    bindEvents() {
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.handleFormSubmit(e);
+            });
+        }
+
+        // Initialize scroll animations
+        this.initScrollAnimations();
+    }
+
+    handleFormSubmit(e) {
+        const submitBtn = document.getElementById('submit-btn');
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+            <span class="flex items-center justify-center space-x-2">
+                <span>SENDING...</span>
+                <i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>
+            </span>
+        `;
+
+        // Reinitialize icons for the spinner
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Simulate form submission
+        setTimeout(() => {
+            // Reset button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `
+                <span class="flex items-center justify-center space-x-2">
+                    <span>SEND MESSAGE</span>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </span>
+            `;
+
+            // Show success message
+            this.showNotification('Thank you! Your message has been sent successfully. I\'ll get back to you within 24 hours.', 'success');
+            
+            // Reset form
+            e.target.reset();
+
+            // Reinitialize icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }, 2000);
+    }
+
+    showNotification(message, type = 'info') {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `fixed top-24 right-6 z-50 px-6 py-4 border text-sm max-w-sm transform translate-x-full transition-transform duration-300 shadow-lg`;
+        
+        // Style based on type
+        switch (type) {
+            case 'success':
+                notification.classList.add('bg-green-500', 'text-white', 'border-green-500');
+                break;
+            case 'error':
+                notification.classList.add('bg-red-500', 'text-white', 'border-red-500');
+                break;
+            default:
+                notification.classList.add('bg-background', 'text-foreground', 'border-border');
+        }
+        
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        // Animate in
+        setTimeout(() => {
+            notification.classList.remove('translate-x-full');
+        }, 100);
+        
+        // Remove after 5 seconds
+        setTimeout(() => {
+            notification.classList.add('translate-x-full');
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }, 5000);
+    }
+
+    initScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    
+                    // Special handling for contact line
+                    const contactLine = entry.target.querySelector('.contact-line');
+                    if (contactLine) {
+                        setTimeout(() => {
+                            contactLine.style.width = '4rem';
+                            contactLine.style.transition = 'width 0.8s ease-out';
+                        }, 200);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+}

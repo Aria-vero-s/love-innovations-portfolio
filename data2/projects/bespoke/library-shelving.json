@@ -1,0 +1,26 @@
+{
+  "id": "library-shelving",
+  "title": "Built-in Library Shelving",
+  "category": "bespoke",
+  "description": "Floor-to-ceiling library shelving system with integrated lighting and hidden storage.",
+  "longDescription": "A comprehensive library shelving system designed to maximize storage while creating a sophisticated reading environment with integrated LED lighting and hidden compartments.",
+  "mainImage": "https://images.unsplash.com/photo-1481277542470-605612bd2d61?w=800&h=600&fit=crop",
+  "images": [
+    "https://images.unsplash.com/photo-1481277542470-605612bd2d61?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+  ],
+  "details": {
+    "duration": "10 weeks",
+    "client": "University Professor",
+    "location": "Oxford",
+    "value": "£18,000"
+  },
+  "features": [
+    "Floor-to-ceiling oak construction",
+    "Integrated LED strip lighting",
+    "Adjustable shelving system",
+    "Hidden storage compartments",
+    "Library ladder installation",
+    "Climate control considerations"
+  ]
+}

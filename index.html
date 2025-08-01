@@ -3,239 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Innovations - Marine Engineering, Property Excellence & Bespoke Craftsmanship</title>
+    <title>Love Innovations</title>
+    <meta name="description"
+        content="Houseboat maintenance, property maintenance, and custom woodwork services.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        background: 'var(--background)',
-                        foreground: 'var(--foreground)',
-                        card: 'var(--card)',
-                        'card-foreground': 'var(--card-foreground)',
-                        popover: 'var(--popover)',
-                        'popover-foreground': 'var(--popover-foreground)',
-                        primary: 'var(--primary)',
-                        'primary-foreground': 'var(--primary-foreground)',
-                        secondary: 'var(--secondary)',
-                        'secondary-foreground': 'var(--secondary-foreground)',
-                        muted: 'var(--muted)',
-                        'muted-foreground': 'var(--muted-foreground)',
-                        accent: 'var(--accent)',
-                        'accent-foreground': 'var(--accent-foreground)',
-                        destructive: 'var(--destructive)',
-                        'destructive-foreground': 'var(--destructive-foreground)',
-                        border: 'var(--border)',
-                        input: 'var(--input)',
-                        ring: 'var(--ring)',
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="./styles/globals.css">
-    <style>
-        /* Animation keyframes */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInFromLeft {
-            from {
-                transform: translateX(-100%);
-            }
-            to {
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .animate-fade-in-left {
-            animation: fadeInLeft 0.6s ease-out forwards;
-        }
-
-        .animate-fade-in-right {
-            animation: fadeInRight 0.6s ease-out forwards;
-        }
-
-        .animate-scale-in {
-            animation: scaleIn 0.8s ease-out forwards;
-        }
-
-        .animate-slide-in {
-            animation: slideInFromLeft 0.8s ease-out forwards;
-        }
-
-        /* Staggered animation delays */
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
-        .delay-600 { animation-delay: 0.6s; }
-        .delay-700 { animation-delay: 0.7s; }
-        .delay-800 { animation-delay: 0.8s; }
-        .delay-900 { animation-delay: 0.9s; }
-        .delay-1000 { animation-delay: 1.0s; }
-
-        /* Initially hidden for animations */
-        .animate-on-scroll {
-            opacity: 0;
-        }
-
-        .animate-on-scroll.in-view {
-            opacity: 1;
-        }
-
-        /* Theme transition */
-        html {
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Smooth theme transitions for all elements */
-        * {
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Override transitions for hover effects */
-        button, a {
-            transition: all 0.3s ease;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--background);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #525252;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #737373;
-        }
-
-        /* Dark mode scrollbar */
-        .dark ::-webkit-scrollbar-track {
-            background: var(--background);
-        }
-
-        .dark ::-webkit-scrollbar-thumb {
-            background: #737373;
-        }
-
-        .dark ::-webkit-scrollbar-thumb:hover {
-            background: #a1a1a1;
-        }
-
-        /* Theme toggle button styles */
-        [data-theme-icon] {
-            transition: opacity 0.2s ease, transform 0.2s ease;
-        }
-
-        button:hover [data-theme-icon] {
-            transform: scale(1.1);
-        }
-
-        /* Modal animations */
-        #more-about-modal {
-            transition: opacity 0.3s ease;
-        }
-
-        #more-about-modal.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        #more-about-modal:not(.hidden) {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        /* Modal content animation */
-        #more-about-modal > div > div {
-            transform: scale(0.95);
-            transition: transform 0.3s ease;
-        }
-
-        #more-about-modal:not(.hidden) > div > div {
-            transform: scale(1);
-        }
-
-        /* Button hover effects */
-        .hover\\:scale-105:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body class="min-h-screen bg-background text-foreground">
-    <div id="app"></div>
-    
-    <!-- Scripts -->
-    <script src="./js/data/projects.js"></script>
-    <script src="./js/utils.js"></script>
-    <script src="./js/components/ImageWithFallback.js"></script>
-    <script src="./js/components/Navigation.js"></script>
-    <script src="./js/components/Hero.js"></script>
-    <script src="./js/components/About.js"></script>
-    <script src="./js/components/Services.js"></script>
-    <script src="./js/components/Projects.js"></script>
-    <script src="./js/components/Testimonials.js"></script>
-    <script src="./js/components/Contact.js"></script>
-    <script src="./js/components/MarineProjects.js"></script>
-    <script src="./js/components/PropertyProjects.js"></script>
-    <script src="./js/components/BespokeProjects.js"></script>
-    <script src="./js/components/ProjectDetail.js"></script>
-    <script src="./js/main.js"></script>
+
+<body class="min-h-screen bg-background text-foreground dark">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 left-0 right-0 bg-[color:rgba(var(--nav-bg-rgb),0.25)] backdrop-blur-md border-b border-border z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <button onclick="window.location.href='/'"
+                        class="text-2xl logo-font text-foreground tracking-tight hover:text-orange-500 transition-colors">
+                        LOVE INNOVATIONS
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-12">
+                        <div class="flex items-center space-x-12">
+                            <button onclick="scrollToSection('about')"
+                                class="text-muted-foreground hover:text-orange-500 transition-colors duration-200 tracking-wide">
+                                About
+                            </button>
+                            <button onclick="scrollToSection('services')"
+                                class="text-muted-foreground hover:text-orange-500 transition-colors duration-200 tracking-wide">
+                                Services
+                            </button>
+                        </div>
+                        <button onclick="scrollToSection('contact')"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 transition-all duration-200 tracking-wide">
+                            Contact
+                        </button>
+                        <!-- Dark/Light Mode Toggle -->
+                        <button id="theme-toggle"
+                            class="p-2 text-muted-foreground hover:text-orange-500 transition-colors">
+                            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-foreground hover:text-orange-500">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-4 pt-4 pb-6 space-y-4 bg-background border-t border-border">
+                    <button onclick="scrollToSection('about')"
+                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                        About
+                    </button>
+                    <button onclick="scrollToSection('services')"
+                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                        Projects & Services
+                    </button>
+                    <button onclick="scrollToSection('testimonials')"
+                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                        Reviews
+                    </button>
+                    <button onclick="scrollToSection('contact')"
+                        class="bg-orange-500 hover:bg-orange-600 text-white w-full py-3 mt-4 tracking-wide">
+                        Contact
+                    </button>
+                    <div class="flex justify-center pt-4">
+                        <button id="mobile-theme-toggle"
+                            class="p-2 text-muted-foreground hover:text-orange-500 transition-colors">
+                            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Background image with parallax effect -->
+            <div class="hero-bg absolute inset-0">
+                <img src="./images/flight2.jpeg" alt="Serene boat scene"
+                    class="w-full h-full object-cover hero-image" />
+                <div class="hero-overlay absolute inset-0 bg-gradient-to-br from-black/60 to-black/80"></div>
+            </div>
+
+            <!-- Fallback background in case image fails -->
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black -z-10"></div>
+
+            <div class="relative z-10 text-center px-6 lg:px-8 max-w-5xl mx-auto">
+                <div class="space-y-8">
+                    <div class="hero-content space-y-6">
+                        <h1 class="hero-title text-5xl md:text-7xl lg:text-8xl text-white tracking-tight">
+                            LAND & WATER
+                        </h1>
+                        <div class="hero-line w-24 h-0.5 bg-orange-500 mx-auto"></div>
+                    </div>
+
+                    <p
+                        class="hero-subtitle text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed tracking-wide">
+                        Bespoke woodworking, property care, and boat maintenance tailored for lasting quality.
+                    </p>
+
+                    <div class="hero-buttons flex flex-col sm:flex-row gap-6 justify-center pt-8">
+                        <button onclick="scrollToSection('services')"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 text-lg tracking-wide transition-all duration-300 hover:scale-105 active:scale-95">
+                            VIEW SERVICES
+                        </button>
+                        <button onclick="scrollToSection('contact')"
+                            class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-10 py-4 text-lg tracking-wide transition-all duration-300 hover:scale-105 active:scale-95">
+                            GET IN TOUCH
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                <button onclick="scrollToSection('about')"
+                    class="text-white/60 hover:text-orange-500 transition-colors animate-bounce">
+                    <i data-lucide="chevron-down" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-card">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <!-- About content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <!-- Services content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Featured Project Section -->
+        <section id="project" class="py-24 bg-card">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <!-- Featured project content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <!-- Testimonials content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-card">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <!-- Contact content will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background border-t border-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <div class="space-y-6">
+                    <div class="text-2xl logo-font text-foreground tracking-tight">LOVE INNOVATIONS</div>
+                    <p class="text-muted-foreground leading-relaxed">
+                        Bespoke woodworking, property care, and boat maintenance tailored for lasting quality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors group">
+                            <i data-lucide="facebook" class="w-5 h-5 text-orange-500 group-hover:text-white"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors group">
+                            <i data-lucide="instagram" class="w-5 h-5 text-orange-500 group-hover:text-white"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors group">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-orange-500 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="space-y-6">
+                    <h4 class="text-foreground tracking-tight">Services</h4>
+                    <ul class="space-y-3 text-muted-foreground">
+                        <li><a href="marine-projects.html" class="hover:text-orange-500 transition-colors">Marine
+                                Engineering</a></li>
+                        <li><a href="property-projects.html" class="hover:text-orange-500 transition-colors">Property
+                                Excellence</a></li>
+                        <li><a href="bespoke-projects.html" class="hover:text-orange-500 transition-colors">Bespoke
+                                Craftsmanship</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <h4 class="text-foreground tracking-tight">Contact</h4>
+                    <div class="space-y-3 text-muted-foreground">
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-orange-500"></i>
+                            <span>+44 7394 065896</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-orange-500"></i>
+                            <span>info@loveinnovations.co.uk</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-orange-500"></i>
+                            <span>North London, England</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+                <div>© 2024 Love Innovations. All rights reserved.</div>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="hover:text-orange-500 transition-colors">Terms of
+                        Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Engineering Credentials Modal -->
+    <div id="credentials-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div
+                class="bg-background border border-border max-w-4xl w-full h-[75vh] overflow-y-auto rounded-2xl shadow-lg">
+                <div class="p-8">
+                    <div class="pl-8 pr-8 flex justify-between items-center mb-8">
+                        <h3 class="text-3xl text-foreground tracking-tight md:mb-0">BEN LOVE</h3>
+                        <button id="close-credentials-modal" class="text-muted-foreground hover:text-foreground p-2">
+                            <i data-lucide="x" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+
+                    <!-- CV-style Section -->
+                    <section class="space-y-12 p-8">
+                        <!-- Contact & Summary -->
+                        <div class="text-justify">
+                            <div
+                                class="mb-4 flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-x-4 gap-y-1 text-sm text-muted-foreground text-center">
+                                <span><strong class="text-orange-500">Phone:</strong> +44 7394 065896</span>
+                                <span><strong class="text-orange-500">Email:</strong> info@loveinnovations.co.uk</span>
+                                <span><strong class="text-orange-500">Location:</strong> North London, UK</span>
+                            </div>
+                            <p class="mt-4 text-muted-foreground leading-relaxed">
+                                Ben is a hands-on tradesman with a background in civil engineering and over nine years
+                                of experience spanning property maintenance, marine systems, and custom woodworking.
+                                From designing infrastructure to restoring boats, he brings precision, reliability, and
+                                a passion for practical problem-solving to every project.
+                            </p>
+                        </div>
+
+                        <!-- Education (full width) -->
+                        <div>
+                            <h4 class="text-orange-500 mb-2 tracking-wide uppercase text-sm border-b-2 border-border">
+                                Education</h4>
+                            <!-- School -->
+                            <div class="flex justify-between items-start border-border py-4">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-medium">BSc Civil Engineering</h3>
+                                    <p class="text-sm text-muted-foreground mb-1">Kingston University</p>
+                                    <ul class="list-disc list-inside text-sm text-muted-foreground">
+                                        <li>2:1 Honours
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="w-24 text-right text-sm text-muted-foreground">2010-2014</div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Experience (full width) -->
+                        <div>
+                            <h4 class="text-orange-500 mb-2 tracking-wide uppercase text-sm border-b-2 border-border">
+                                Professional Experience
+                            </h4>
+                            <div class="space-y-6">
+                                <!-- Entry -->
+                                <div class="flex justify-between items-start border-border py-4">
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-medium">Engineer</h3>
+                                        <p class="text-sm text-muted-foreground mb-1">Synergy Boreholes</p>
+                                        <ul class="list-disc list-inside text-sm text-muted-foreground">
+                                            <li>Led complex ground investigation projects and structural assessments.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-24 text-right text-sm text-muted-foreground">2018–2020</div>
+                                </div>
+                                <!-- Entry -->
+                                <div class="flex justify-between items-start border-border py-4">
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-medium">Civil Engineer</h3>
+                                        <p class="text-sm text-muted-foreground mb-1">Countryside Properties</p>
+                                        <ul class="list-disc list-inside text-sm text-muted-foreground">
+                                            <li>Managed residential development projects and infrastructure design.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-24 text-right text-sm text-muted-foreground">2016–2018</div>
+                                </div>
+                                <!-- Entry -->
+                                <div class="flex justify-between items-start border-border py-4">
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-medium">Rail Infrastructure Engineer</h3>
+                                        <p class="text-sm text-muted-foreground mb-1">4Rail Services</p>
+                                        <ul class="list-disc list-inside text-sm text-muted-foreground">
+                                            <li>Implemented railway maintenance and safety systems.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-24 text-right text-sm text-muted-foreground">2015–2016</div>
+                                </div>
+                                <!-- Entry -->
+                                <div class="flex justify-between items-start border-border py-4">
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-medium">Design Engineer</h3>
+                                        <p class="text-sm text-muted-foreground mb-1">Barnet Council</p>
+                                        <ul class="list-disc list-inside text-sm text-muted-foreground">
+                                            <li>Designed public infrastructure and urban planning solutions.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-24 text-right text-sm text-muted-foreground">2014–2015</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skills & Expertise (two columns) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <!-- Core Competencies -->
+                            <div>
+                                <h4
+                                    class="text-orange-500 mb-2 tracking-wide uppercase text-sm border-b-2 border-border">
+                                    Core Competencies</h4>
+                                <div class="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-orange-500 mr-2"></i>Structural
+                                        Analysis
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-orange-500 mr-2"></i>CAD Design
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-orange-500 mr-2"></i>Project
+                                        Management
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-orange-500 mr-2"></i>Marine
+                                        Engineering
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-orange-500 mr-2"></i>Quality
+                                        Assurance
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-orange-500 mr-2"></i>Problem Solving
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Practical Expertise -->
+                            <div>
+                                <h4
+                                    class="text-orange-500 mb-2 tracking-wide uppercase text-sm border-b-2 border-border">
+                                    Practical Expertise
+                                </h4>
+                                <ul class="space-y-2 text-sm text-muted-foreground">
+                                    <li class="flex items-center">
+                                        <i data-lucide="hammer" class="w-4 h-4 text-orange-500 mr-2"></i>
+                                        Self-directed learning in marine mechanics and systems
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="ruler" class="w-4 h-4 text-orange-500 mr-2"></i>
+                                        Precision woodworking for custom installations
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="lightbulb" class="w-4 h-4 text-orange-500 mr-2"></i>
+                                        Creative problem-solving across trades
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="layers" class="w-4 h-4 text-orange-500 mr-2"></i>
+                                        Multi-disciplinary project execution
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Video Fullscreen Modal -->
+    <div></div>
+
+    <!-- JavaScript -->
+    <script src="./js/shared/theme.js"></script>
+    <script src="./js/shared/navigation.js"></script>
+    <script src="./js/home.js"></script>
 </body>
+
 </html>

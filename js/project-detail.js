@@ -44,15 +44,23 @@ class ProjectDetailPage {
             // Featured project - piano-chest
             'piano-chest': {
                 id: 'piano-chest',
-                title: 'Luxury Yacht Interior Restoration',
-                category: 'Marine Engineering',
-                description: 'Complete interior restoration of a 45ft luxury yacht including custom woodwork and modern amenities.',
+                title: 'Piano to Chest Transformation',
+                category: 'Heritage Restoration',
+                description: 'When a client brought in her friend\'s childhood piano, Ben transformed it into a handcrafted storage chest using its original pieces. This emotional project showcases the connection between craftsmanship and memory, preserving the piano\'s history while creating something beautiful and functional.',
+                details: {
+                    duration: '4 weeks',
+                    client: 'Private Client',
+                    location: 'Client Home',
+                    materials: 'Original piano wood, brass hardware, custom cushioning',
+                    finish: 'Natural wood stain with protective coating'
+                },
+                story: 'This project began when a client approached Ben with a deeply personal request. Her friend had passed away, leaving behind a childhood piano that held precious memories but was beyond musical repair. Rather than discarding this meaningful piece, Ben proposed transforming it into a beautiful storage chest that would honor the piano\'s history while giving it new purpose. Every original piece of wood was carefully preserved and repurposed, from the keyboard cover becoming the chest lid to the pedals being incorporated as decorative elements. The brass hardware was restored to its original luster, and the interior was lined with soft fabric to protect stored items. When the client first saw the completed chest, her emotional reaction confirmed that this wasn\'t just furniture - it was a tribute to friendship and the power of thoughtful craftsmanship.',
                 images: [
-                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1566346270832-9e8f0d0df4d5?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1558489580-faa74691fdc5?w=1200&h=800&fit=crop'
+                    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    'https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    'https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
                 ]
             },
             // Marine projects
@@ -198,7 +206,7 @@ class ProjectDetailPage {
                 category: 'Bespoke Craftsmanship',
                 description: 'Custom dining table crafted from premium English oak with traditional mortise and tenon joinery.',
                 images: [
-                    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop',
+                    'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=1200&h=800&fit=crop',
                     'https://images.unsplash.com/photo-1481277542470-605612bd2d61?w=1200&h=800&fit=crop',
                     'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop',
                     'https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=1200&h=800&fit=crop'
@@ -344,6 +352,59 @@ class ProjectDetailPage {
                     </div>
                 ` : ''}
             </div>
+
+            <!-- Project Story Section (for piano-chest) -->
+            ${this.project.story ? `
+                <div class="max-w-4xl mx-auto mt-16 animate-on-scroll delay-700">
+                    <div class="bg-card border border-border p-8 md:p-12">
+                        <h2 class="text-2xl md:text-3xl mb-6 tracking-tight">The Story Behind This Project</h2>
+                        <p class="text-muted-foreground leading-relaxed text-lg">
+                            ${this.project.story}
+                        </p>
+                    </div>
+                </div>
+            ` : ''}
+
+            <!-- Project Details Section -->
+            ${this.project.details ? `
+                <div class="max-w-4xl mx-auto mt-16 animate-on-scroll delay-900">
+                    <div class="bg-muted/50 p-8 md:p-12">
+                        <h2 class="text-2xl md:text-3xl mb-8 tracking-tight">Project Details</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            ${Object.entries(this.project.details).map(([key, value]) => `
+                                <div>
+                                    <div class="text-sm text-orange-500 tracking-wide mb-2 uppercase">${key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                                    <div class="text-foreground">${value}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            ` : ''}
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16 animate-on-scroll delay-1100">
+                <div class="space-y-6">
+                    <h3 class="text-2xl text-foreground tracking-tight">Interested in Similar Work?</h3>
+                    <p class="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                        Every project is unique, crafted with precision and attention to detail. Contact us to discuss your vision.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button 
+                            onclick="window.location.href='/#contact'"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 tracking-wide transition-all duration-300 hover:scale-105"
+                        >
+                            Start Your Project
+                        </button>
+                        <button 
+                            onclick="window.location.href='/'"
+                            class="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 tracking-wide transition-all duration-300 hover:scale-105"
+                        >
+                            View More Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
         `;
 
         // Initialize scroll animations
@@ -395,9 +456,9 @@ class ProjectDetailPage {
     }
 
     handleBackToProjects() {
-        // For the featured project "piano-chest", return to home page
+        // For the featured project "piano-chest", return to bespoke projects page since it's a bespoke project
         if (this.projectId === 'piano-chest') {
-            window.location.href = '/';
+            window.location.href = 'bespoke-projects.html';
             return;
         }
 

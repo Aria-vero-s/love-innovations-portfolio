@@ -1,0 +1,33 @@
+{
+  "id": "yacht-restoration",
+  "title": "Classic Yacht Restoration",
+  "category": "marine",
+  "description": "Full restoration of a 1960s classic sailing yacht including hull work, rigging, and interior refurbishment.",
+  "longDescription": "A complete restoration project of a beautiful 1960s classic sailing yacht. This project required extensive hull work, complete rigging replacement, and a full interior refurbishment while maintaining the vessel's original character and charm.",
+  "mainImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
+  "images": [
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1566346270832-9e8f0d0df4d5?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1544551763-77f98d70d3d1?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1558618047-3c8c76ca22ad?w=800&h=600&fit=crop"
+  ],
+  "details": {
+    "duration": "12 weeks",
+    "client": "Maritime Heritage Society",
+    "location": "Portsmouth Historic Dockyard",
+    "value": "£85,000"
+  },
+  "features": [
+    "Complete hull restoration and repainting",
+    "New stainless steel rigging installation",
+    "Traditional teak deck replacement",
+    "Period-appropriate interior restoration",
+    "Modern safety equipment integration",
+    "Engine rebuild and modernization"
+  ],
+  "testimonial": {
+    "text": "The restoration work was exceptional. Ben brought this classic yacht back to life while respecting its heritage.",
+    "author": "Captain Robert Hayes",
+    "role": "Maritime Heritage Society"
+  }
+}

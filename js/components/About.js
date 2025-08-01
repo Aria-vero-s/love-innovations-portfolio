@@ -1,263 +1,301 @@
-function createAbout() {
-    return `
-        <section id="about" class="py-24 bg-background">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <!-- Content -->
-                    <div class="space-y-8 animate-on-scroll animate-fade-in-left">
-                        <div class="space-y-6">
-                            <div class="w-16 h-0.5 bg-orange-500"></div>
-                            <h2 class="text-4xl md:text-5xl text-foreground tracking-tight">
-                                ABOUT BEN
-                            </h2>
-                        </div>
+export default class About {
+    constructor() {
+        this.profileImage = 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=600&fit=crop&crop=center';
+    }
 
-                        <div class="space-y-6">
-                            <p class="text-lg text-muted-foreground leading-relaxed">
-                                With a BSc in Civil Engineering and over nine years of hands-on experience across diverse engineering and construction projects, I bring technical expertise and craftsman precision to every job.
-                            </p>
-                            
-                            <p class="text-lg text-muted-foreground leading-relaxed">
-                                From marine engineering solutions to property restoration and bespoke woodwork, my approach combines analytical problem-solving with meticulous attention to detail. Every project is an opportunity to deliver excellence that stands the test of time.
-                            </p>
-                        </div>
+    async render() {
+        const processSteps = [
+            {
+                step: "01",
+                title: "Initial Consultation",
+                description: "Free consultation to understand your vision, requirements, and timeline.",
+                duration: "Within 24 hours"
+            },
+            {
+                step: "02",
+                title: "Design & Planning",
+                description: "Detailed technical assessment, design proposals, and project planning.",
+                duration: "3-5 days"
+            },
+            {
+                step: "03",
+                title: "Execution",
+                description: "Precision craftsmanship with regular progress updates and quality checks.",
+                duration: "Project dependent"
+            },
+            {
+                step: "04",
+                title: "Completion",
+                description: "Final walkthrough, quality assurance, and ongoing support as needed.",
+                duration: "Same day"
+            }
+        ];
 
-                        <!-- Button Group -->
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button onclick="scrollToContact()" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 tracking-wide transition-all duration-300 hover:scale-105">
-                                DISCUSS YOUR PROJECT
-                            </button>
-                            <button onclick="showMoreAboutModal()" class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 tracking-wide transition-all duration-300 hover:scale-105">
-                                MORE ABOUT ME
-                            </button>
+        const benefits = [
+            {
+                title: "Transparent Pricing",
+                description: "No hidden costs. Clear estimates provided upfront with detailed breakdowns."
+            },
+            {
+                title: "Ongoing Support",
+                description: "Ben is committed to client satisfaction and offers continued support after the project is complete, where possible."
+            },
+            {
+                title: "Regular Updates",
+                description: "Stay informed with progress photos and regular communication throughout."
+            }
+        ];
+
+        return `
+            <!-- Main About Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24 animate-on-scroll">
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <div class="about-line w-16 h-0.5 bg-orange-500"></div>
+                        <h2 class="text-4xl md:text-5xl text-foreground tracking-tight">
+                            BEN LOVE
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            Ben is a versatile tradesman with a background in civil engineering and over nine years of experience across property, marine, and bespoke furniture projects. Whether on land or at sea, Ben brings thoughtful, durable solutions to every project.
+                        </p>
+                    </div>
+
+                    <!-- Service highlights -->
+                    <div class="grid grid-cols-1 gap-4 pt-6">
+                        <div class="flex items-center space-x-4 group animate-on-scroll delay-300">
+                            <div class="w-2 h-2 bg-orange-500 group-hover:scale-125 transition-transform duration-200"></div>
+                            <span class="text-foreground tracking-wide">Boat Maintenance & Engineering</span>
+                        </div>
+                        <div class="flex items-center space-x-4 group animate-on-scroll delay-400">
+                            <div class="w-2 h-2 bg-orange-500 group-hover:scale-125 transition-transform duration-200"></div>
+                            <span class="text-foreground tracking-wide">Property Care & Restoration</span>
+                        </div>
+                        <div class="flex items-center space-x-4 group animate-on-scroll delay-500">
+                            <div class="w-2 h-2 bg-orange-500 group-hover:scale-125 transition-transform duration-200"></div>
+                            <span class="text-foreground tracking-wide">Bespoke Woodwork & Furniture</span>
                         </div>
                     </div>
 
-                    <!-- Image -->
-                    <div class="animate-on-scroll animate-fade-in-right delay-200">
-                        <div class="relative">
-                            ${createImageWithFallback(
-                                './images/profile.jpg',
-                                'Ben Love - Civil Engineer and Craftsman',
-                                'w-full h-96 object-cover object-[center_37%] shadow-lg'
-                            )}
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                        </div>
-                    </div>
+                    <!-- Engineering Excellence Button - Opens Modal -->
+                    <button
+                        id="credentials-toggle"
+                        class="flex items-center space-x-3 text-orange-500 hover:text-white transition-colors group pt-4 animate-on-scroll delay-100"
+                    >
+                        <span class="tracking-wide">READ MORE</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4 transition-transform duration-200"></i>
+                    </button>
                 </div>
+
+                <div class="lg:order-last animate-on-scroll delay-200 w-full">
+                <div class="relative w-full lg:max-w-lg mx-auto">
+                    <img 
+                    src="./images/profile.jpg"
+                    alt="Ben Love profile picture"
+                    class="w-full h-80 md:h-96 lg:h-[480px] object-cover object-[center_40%] profile-image"
+                    />
+                    <div class="absolute inset-0"></div>
+                </div>
+                </div>
+
             </div>
 
-            <!-- More About Me Modal -->
-            <div id="more-about-modal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm">
-                <div class="flex items-center justify-center min-h-screen p-4">
-                    <div class="bg-background border border-border rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-                        <!-- Modal Header -->
-                        <div class="flex items-center justify-between p-6 border-b border-border">
-                            <h3 class="text-2xl text-foreground tracking-tight">Ben Love</h3>
-                            <button onclick="hideMoreAboutModal()" class="text-muted-foreground hover:text-foreground transition-colors">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <!-- Modal Content -->
-                        <div class="p-6 space-y-8">
-                            <!-- Contact -->
-                            <div class="space-y-6">
-                                <h4 class="text-xl text-foreground tracking-tight mb-4">Contact</h4>
-                                <div class="flex flex-wrap gap-x-8 gap-y-2">
-                                <div class="flex items-center space-x-2">
-                                    <span class="font-semibold text-foreground whitespace-nowrap">Phone:</span>
-                                    <span>+44 123 123 1234</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <span class="font-semibold text-foreground whitespace-nowrap">Email:</span>
-                                    <a href="mailto:benlove@loveinnovations.com" class="hover:underline text-orange-500">benlove@loveinnovations.com</a>
-                                </div>
-                                </div>
-                            </div>
-
-                            <!-- Detailed Bio -->
-                            <div class="space-y-6">
-                                <div class="w-16 h-0.5 bg-orange-500"></div>
-                                <h4 class="text-xl text-foreground tracking-tight">Summary</h4>
-                                
-                                <div class="space-y-4 text-muted-foreground leading-relaxed">
-                                    <p>
-                                        Ben Love is a dedicated tradesman with over nine years of engineering experience. He holds a 2:1 BSc in Civil Engineering from Kingston University. He began his career gaining geotechnical experience at Synergy Boreholes, where he honed his skills in subsurface investigations. He then advanced to a civil engineering role at Countryside, contributing to various construction projects.
-                                    </p>
-                                    
-                                    <p>
-                                        Ben's expertise expanded as he collaborated on projects within the underground network for 4Rail Services, enhancing his understanding of rail infrastructure. At Barnet Council, he worked as a Design Development Engineer, focusing on innovative approaches to traffic and urban development. Pursuing his passion for maritime pursuits, Ben transitioned into boat building, where he taught himself marine engineering, merging his civil engineering background with hands-on craftsmanship.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Education Timeline -->
-                            <div class="space-y-6">
-                                <div class="w-16 h-0.5 bg-orange-500"></div>
-                                <h4 class="text-xl text-foreground tracking-tight">Education</h4>
-                                
-                                <div class="space-y-6">
-                                    <div class="flex gap-4">
-                                        <div class="flex-shrink-0 w-3 h-3 bg-orange-500 rounded-full mt-2"></div>
-                                        <div>
-                                            <h5 class="text-foreground">Kingston University</h5>
-                                            <p class="text-sm text-muted-foreground">2:1 BSc in Civil Engineering</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Experience Timeline -->
-                            <div class="space-y-6">
-                                <div class="w-16 h-0.5 bg-orange-500"></div>
-                                <h4 class="text-xl text-foreground tracking-tight">Work Experience</h4>
-                                
-                                <div class="space-y-6">
-                                    <div class="flex gap-4">
-                                        <div class="flex-shrink-0 w-3 h-3 bg-orange-500 rounded-full mt-2"></div>
-                                        <div>
-                                            <h5 class="text-foreground">Synergy Boreholes</h5>
-                                            <p class="text-sm text-muted-foreground">Geotechnical experience and subsurface investigations</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex gap-4">
-                                        <div class="flex-shrink-0 w-3 h-3 bg-orange-500 rounded-full mt-2"></div>
-                                        <div>
-                                            <h5 class="text-foreground">Countryside</h5>
-                                            <p class="text-sm text-muted-foreground">Civil engineering role on construction projects</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex gap-4">
-                                        <div class="flex-shrink-0 w-3 h-3 bg-orange-500 rounded-full mt-2"></div>
-                                        <div>
-                                            <h5 class="text-foreground">4Rail Services</h5>
-                                            <p class="text-sm text-muted-foreground">Underground network and rail infrastructure projects</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex gap-4">
-                                        <div class="flex-shrink-0 w-3 h-3 bg-orange-500 rounded-full mt-2"></div>
-                                        <div>
-                                            <h5 class="text-foreground">Barnet Council</h5>
-                                            <p class="text-sm text-muted-foreground">Design Development Engineer - traffic and urban development</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex gap-4">
-                                        <div class="flex-shrink-0 w-3 h-3 bg-orange-500 rounded-full mt-2"></div>
-                                        <div>
-                                            <h5 class="text-foreground">Marine Engineering Transition</h5>
-                                            <p class="text-sm text-muted-foreground">Self-taught marine engineering and boat building expertise</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Skills Section -->
-                            <div class="space-y-6">
-                            <div class="w-16 h-0.5 bg-orange-500"></div>
-                            <h4 class="text-xl text-foreground tracking-tight">Skills</h4>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-muted-foreground">
-                                <div class="bg-card border border-border rounded-lg p-6 hover:border-orange-500/50 transition-colors">
-                                <h5 class="text-lg text-foreground mb-3">Marine Engineering</h5>
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li>Fiberglass work</li>
-                                    <li>Electrical wiring</li>
-                                    <li>Plumbing & leak detection</li>
-                                    <li>Carbon fibre work</li>
-                                </ul>
-                                </div>
-
-                                <div class="bg-card border border-border rounded-lg p-6 hover:border-orange-500/50 transition-colors">
-                                <h5 class="text-lg text-foreground mb-3">Property Maintenance</h5>
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li>Structural repairs</li>
-                                    <li>Electrical wiring</li>
-                                    <li>Plumbing maintenance</li>
-                                    <li>Carpentry work</li>
-                                    <li>Painting</li>
-                                </ul>
-                                </div>
-
-                                <div class="bg-card border border-border rounded-lg p-6 hover:border-orange-500/50 transition-colors">
-                                <h5 class="text-lg text-foreground mb-3">Woodworking & Carpentry</h5>
-                                <ul class="list-disc list-inside space-y-1">
-                                    <li>Custom furniture</li>
-                                    <li>Cabinet making & finish</li>
-                                    <li>Use of hand & power tools</li>
-                                    <li>Detailed finishing & sanding</li>
-                                </ul>
-                                </div>
-                            </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Modal Footer -->
-                        <div class="flex justify-end gap-4 p-6 border-t border-border">
-                            <button onclick="hideMoreAboutModal()" class="border border-border text-foreground hover:bg-muted px-6 py-2 tracking-wide transition-colors">
-                                Close
-                            </button>
-                            <button onclick="hideMoreAboutModal(); scrollToContact();" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 tracking-wide transition-colors">
-                                Get In Touch
-                            </button>
-                        </div>
+            <!-- What to Expect Section -->
+            <div class="mb-24 animate-on-scroll delay-700">
+                <div class="text-center mb-16">
+                    <div class="space-y-6">
+                        <div class="expect-line w-16 h-0.5 bg-orange-500 mx-auto"></div>
+                        <h2 class="text-3xl md:text-4xl text-foreground tracking-tight">
+                            WHAT TO EXPECT
+                        </h2>
+                        <p class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                            A streamlined process designed for clarity, quality, and your peace of mind
+                        </p>
                     </div>
                 </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="process-steps">
+                    ${processSteps.map((step, index) => `
+                        <div class="animate-on-scroll delay-[${800 + index*100}ms] process-step-card" data-step="${step.step}">
+                            <div class="border border-border bg-card group transition-all duration-500 p-6 space-y-4 h-full">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-3xl tracking-tight text-orange-500/30 transition-colors duration-500 step-number">
+                                        ${step.step}
+                                    </span>
+                                    ${index < processSteps.length - 1 ? '<i data-lucide="arrow-right" class="w-4 h-4 text-muted-foreground lg:hidden"></i>' : ''}
+                                </div>
+                                <div class="space-y-3">
+                                    <h4 class="text-lg tracking-tight text-foreground transition-colors duration-500 step-title">
+                                        ${step.title}
+                                    </h4>
+                                    <p class="text-sm text-muted-foreground leading-relaxed">
+                                        ${step.description}
+                                    </p>
+                                    <div class="text-xs tracking-wide pt-2 text-orange-500 transition-colors duration-500 step-duration">
+                                        ${step.duration}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Process Benefits -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    ${benefits.map((benefit, index) => `
+                        <div class="flex items-start space-x-4 animate-on-scroll delay-${1200 + (index * 100)}">
+                            <div class="p-2 bg-orange-500 text-white mt-1">
+                                <i data-lucide="check-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="text-foreground tracking-tight">${benefit.title}</h4>
+                                <p class="text-sm text-muted-foreground leading-relaxed">
+                                    ${benefit.description}
+                                </p>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
             </div>
-        </section>
-    `;
-}
+        `;
+    }
 
-// Modal functionality
-function showMoreAboutModal() {
-    const modal = document.getElementById('more-about-modal');
-    if (modal) {
-        modal.classList.remove('hidden');
-        // Prevent body scroll when modal is open
-        document.body.style.overflow = 'hidden';
+    bindEvents() {
+        const toggleBtn = document.getElementById('credentials-toggle');
+        const modal = document.getElementById('credentials-modal');
+        const closeBtn = document.getElementById('close-credentials-modal');
 
-        // Add click outside to close
-        modal.addEventListener('click', function (e) {
-            if (e.target === modal) {
-                hideMoreAboutModal();
-            }
+        // Open modal
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        // Close modal
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        // Close modal when clicking outside
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Initialize scroll animations
+        this.initScrollAnimations();
+
+        // Initialize sequential step animation
+        this.initSequentialStepAnimation();
+    }
+
+    initSequentialStepAnimation() {
+        const processStepsContainer = document.getElementById('process-steps');
+        if (!processStepsContainer) return;
+
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.startSequentialAnimation();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(processStepsContainer);
+    }
+
+    async startSequentialAnimation() {
+        const cards = document.querySelectorAll('.process-step-card');
+
+        // Wait a bit before starting the sequence
+        await this.delay(800);
+
+        for (let i = 0; i < cards.length; i++) {
+            const card = cards[i];
+            const cardElement = card.querySelector('div');
+            const stepNumber = card.querySelector('.step-number');
+            const stepTitle = card.querySelector('.step-title');
+            const stepDuration = card.querySelector('.step-duration');
+
+            // Animate this card
+            cardElement.classList.add('border-orange-500', 'shadow-lg', 'shadow-orange-500/20', 'scale-105');
+            stepNumber.classList.remove('text-orange-500/30');
+            stepNumber.classList.add('text-orange-500');
+            stepTitle.classList.add('text-orange-500');
+            stepDuration.classList.add('text-orange-600');
+
+            // Wait for this animation
+            await this.delay(800);
+
+            // Reset this card
+            cardElement.classList.remove('border-orange-500', 'shadow-lg', 'shadow-orange-500/20', 'scale-105');
+            stepNumber.classList.add('text-orange-500/30');
+            stepNumber.classList.remove('text-orange-500');
+            stepTitle.classList.remove('text-orange-500');
+            stepDuration.classList.remove('text-orange-600');
+
+            // Small pause between cards
+            await this.delay(200);
+        }
+    }
+
+    delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    initScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+
+                    // Special handling for lines
+                    const aboutLine = entry.target.querySelector('.about-line');
+                    const expectLine = entry.target.querySelector('.expect-line');
+
+                    if (aboutLine) {
+                        setTimeout(() => {
+                            aboutLine.style.width = '4rem';
+                            aboutLine.style.transition = 'width 0.8s ease-out';
+                        }, 300);
+                    }
+
+                    if (expectLine) {
+                        setTimeout(() => {
+                            expectLine.style.width = '4rem';
+                            expectLine.style.transition = 'width 0.8s ease-out';
+                        }, 800);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(element => {
+            observer.observe(element);
         });
-
-        // Add escape key to close
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-                hideMoreAboutModal();
-            }
-        });
     }
 }
-
-function hideMoreAboutModal() {
-    const modal = document.getElementById('more-about-modal');
-    if (modal) {
-        modal.classList.add('hidden');
-        // Restore body scroll
-        document.body.style.overflow = '';
-    }
-}
-
-// Scroll to contact function
-function scrollToContact() {
-    const contactElement = document.getElementById('contact');
-    if (contactElement) {
-        contactElement.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-// Export functions to global scope
-window.createAbout = createAbout;
-window.showMoreAboutModal = showMoreAboutModal;
-window.hideMoreAboutModal = hideMoreAboutModal;
-window.scrollToContact = scrollToContact;
