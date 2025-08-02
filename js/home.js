@@ -10,7 +10,6 @@ class HomePage {
         await this.loadComponents();
         this.renderComponents();
         this.initHeroAnimations();
-        this.initVideoPlayer();
     }
 
     async loadComponents() {
@@ -156,40 +155,6 @@ class HomePage {
                 heroElements.indicator.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
             }
         }, 2000);
-    }
-
-    initVideoPlayer() {
-        const closeFullscreen = document.getElementById('close-fullscreen');
-        const modal = document.getElementById('video-fullscreen-modal');
-        const fullscreenVideo = document.getElementById('fullscreen-video');
-
-        if (closeFullscreen) {
-            closeFullscreen.addEventListener('click', () => {
-                modal.classList.add('hidden');
-                fullscreenVideo.pause();
-                fullscreenVideo.src = '';
-            });
-        }
-
-        // Close on modal background click
-        if (modal) {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.add('hidden');
-                    fullscreenVideo.pause();
-                    fullscreenVideo.src = '';
-                }
-            });
-        }
-
-        // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
-                modal.classList.add('hidden');
-                fullscreenVideo.pause();
-                fullscreenVideo.src = '';
-            }
-        });
     }
 }
 

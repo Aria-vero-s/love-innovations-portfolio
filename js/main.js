@@ -15,19 +15,16 @@ class LoveInnovationsApp {
 
         // Load all components
         await this.loadComponents();
-        
+
         // Initialize navigation
         this.initNavigation();
-        
+
         // Initialize mobile menu
         this.initMobileMenu();
-        
+
         // Initialize hero animations
         this.initHeroAnimations();
-        
-        // Initialize video player
-        this.initVideoPlayer();
-        
+
         // Render initial view
         this.renderCurrentView();
     }
@@ -36,7 +33,7 @@ class LoveInnovationsApp {
         // Load component modules
         const componentModules = [
             'About',
-            'Services', 
+            'Services',
             'Projects',
             'Testimonials',
             'Contact',
@@ -97,7 +94,7 @@ class LoveInnovationsApp {
                 menu.classList.add('hidden');
                 toggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
             }
-            
+
             // Reinitialize icons
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
@@ -184,36 +181,6 @@ class LoveInnovationsApp {
         }, 2000);
     }
 
-    initVideoPlayer() {
-        const closeFullscreen = document.getElementById('close-fullscreen');
-        const modal = document.getElementById('video-fullscreen-modal');
-        const fullscreenVideo = document.getElementById('fullscreen-video');
-
-        closeFullscreen?.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            fullscreenVideo.pause();
-            fullscreenVideo.src = '';
-        });
-
-        // Close on modal background click
-        modal?.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-                fullscreenVideo.pause();
-                fullscreenVideo.src = '';
-            }
-        });
-
-        // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
-                modal.classList.add('hidden');
-                fullscreenVideo.pause();
-                fullscreenVideo.src = '';
-            }
-        });
-    }
-
     scrollToSection(sectionId) {
         if (this.currentView !== 'home') {
             this.handleBackToHome();
@@ -279,15 +246,15 @@ class LoveInnovationsApp {
 
     handleBackToProjects() {
         // Determine which project page to return to based on the current project
-        if (this.currentProjectId.includes('piano') || this.currentProjectId.includes('chest') || 
-            this.currentProjectId.includes('furniture') || this.currentProjectId.includes('dining') || 
-            this.currentProjectId.includes('wardrobe') || this.currentProjectId.includes('kitchen-cabinets') || 
+        if (this.currentProjectId.includes('piano') || this.currentProjectId.includes('chest') ||
+            this.currentProjectId.includes('furniture') || this.currentProjectId.includes('dining') ||
+            this.currentProjectId.includes('wardrobe') || this.currentProjectId.includes('kitchen-cabinets') ||
             this.currentProjectId.includes('floating') || this.currentProjectId.includes('antique')) {
             this.currentView = 'bespoke-projects';
-        } else if (this.currentProjectId.includes('property') || this.currentProjectId.includes('renovation') || 
-                   this.currentProjectId.includes('luxury') || this.currentProjectId.includes('structural') || 
-                   this.currentProjectId.includes('bathroom') || this.currentProjectId.includes('kitchen-extension') || 
-                   this.currentProjectId.includes('period') || this.currentProjectId.includes('commercial')) {
+        } else if (this.currentProjectId.includes('property') || this.currentProjectId.includes('renovation') ||
+            this.currentProjectId.includes('luxury') || this.currentProjectId.includes('structural') ||
+            this.currentProjectId.includes('bathroom') || this.currentProjectId.includes('kitchen-extension') ||
+            this.currentProjectId.includes('period') || this.currentProjectId.includes('commercial')) {
             this.currentView = 'property-projects';
         } else {
             this.currentView = 'marine-projects';
@@ -314,14 +281,14 @@ class LoveInnovationsApp {
             subNav.classList.add('hidden');
             footer.classList.remove('hidden');
             document.getElementById('home-view').classList.add('active');
-            
+
             // Render home sections
             this.renderHomeSections();
         } else {
             homeNav.classList.add('hidden');
             subNav.classList.remove('hidden');
             footer.classList.add('hidden');
-            
+
             // Show appropriate project view
             const viewElement = document.getElementById(`${this.currentView}-view`);
             if (viewElement) {

@@ -17,6 +17,9 @@ export default class Projects {
             }
         };
 
+        this.featuredProject = featuredProject;
+
+
         return `
             <!-- Header -->
             <div class="text-center mb-20 animate-on-scroll">
@@ -129,7 +132,38 @@ export default class Projects {
     }
 
     initVideoPlayer() {
-    }
+        const trigger   = document.getElementById('featured-video-player');
+        const modal     = document.getElementById('videoModal');
+        const closeBtn  = document.getElementById('closeModal');
+        const modalVid  = document.getElementById('modalVideo');
+        const modalSrc  = modalVid.querySelector('source');
+      
+        if (!trigger || !modal || !closeBtn || !modalVid) return;
+      
+        trigger.addEventListener('click', () => {
+          // now this.featuredProject is defined
+          modalSrc.src = this.featuredProject.videoUrl;
+          modalVid.load();
+      
+          modal.classList.add('flex');
+          modal.classList.remove('hidden');
+          modalVid.currentTime = 0;
+          modalVid.play();
+        });
+      
+        const doClose = () => {
+          modalVid.pause();
+          modalVid.currentTime = 0;
+          modal.classList.remove('flex');
+          modal.classList.add('hidden');
+        };
+      
+        closeBtn.addEventListener('click', doClose);
+        modal.addEventListener('click', e => {
+          if (e.target === modal) doClose();
+        });
+      }
+      
 
     initScrollAnimations() {
         const observerOptions = {

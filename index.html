@@ -419,7 +419,27 @@
 
 
     <!-- Video Fullscreen Modal -->
-    <div></div>
+      <!-- Video Fullscreen Modal (move to index.html) -->
+    <div
+    id="videoModal"
+    class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-md hidden z-50 overflow-visible"
+    >
+    <div class="modal-content relative max-h-[90vh]">
+        <button
+        id="closeModal"
+        class="fixed top-4 right-4 text-white text-4xl bg-black/60 rounded-full p-2 z-50"
+        >&times;</button>
+        <video
+        id="modalVideo"
+        class="h-[90vh] w-auto rounded-xl shadow-2xl mx-auto"
+        controls
+        >
+        <source src="./images/03_bespoke/project/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+    </div>
+    </div>
+
 
     <!-- JavaScript -->
     <script src="./js/shared/theme.js"></script>

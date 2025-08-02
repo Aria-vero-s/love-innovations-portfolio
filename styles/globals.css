@@ -351,55 +351,27 @@ button:hover {
   transform: translateY(-1px);
 }
 
-/* Modal Styles */
-#credentials-modal,
-#video-fullscreen-modal {
+/* Video Modal Styles */
+/* hidden by default, flex when you add .flex */
+#videoModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(8px);
-}
-
-/* portrait-oriented modal */
-#video-modal {
-  display: none;           /* hidden by default */
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
-  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#video-modal-player {
-  max-height: 100vh;  /* fill vertical space */
-  width: auto;
-  object-fit: contain;
-}
-
-
-/* VIDEO FULLSCREEN MODAL */
-#video-fullscreen-modal {
-  display: none;               /* hidden by default */
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
   z-index: 9999;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+}
+#videoModal.flex {
+  display: flex !important;
 }
 
-#video-fullscreen-modal.open {
-  display: flex !important;    /* force the flex container on */
+#closeModal {
+  top: 1rem !important;
+  right: 1rem !important;
+  padding: 0.5rem 1.0rem !important;
 }
-
-#fullscreen-video {
-  max-height: 100vh;           /* fill viewport height */
-  width: auto;                 /* preserve portrait aspect */
-  object-fit: contain;         /* letterbox, no cropping */
-  border-radius: 8px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
-
 
 @keyframes fadeIn {
   from {

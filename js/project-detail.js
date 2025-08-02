@@ -13,7 +13,7 @@ class ProjectDetailPage {
         const urlParams = new URLSearchParams(window.location.search);
         this.projectId = urlParams.get('id');
         this.category = urlParams.get('category');
-        
+
         if (this.projectId) {
             this.loadAndRenderProject();
         } else {
@@ -289,6 +289,19 @@ class ProjectDetailPage {
             }
         }
     }
+    // Determine projects listing URL based on category
+    getProjectsPageUrl() {
+        switch (this.category) {
+            case 'marine':
+                return 'marine-projects.html';
+            case 'property':
+                return 'property-projects.html';
+            case 'bespoke':
+                return 'bespoke-projects.html';
+            default:
+                return '/';
+        }
+    }
 
     renderProject() {
         const container = document.getElementById('project-content');
@@ -397,7 +410,7 @@ class ProjectDetailPage {
                             Start Your Project
                         </button>
                         <button 
-                            onclick="window.location.href='/'"
+                            onclick="window.location.href='${this.getProjectsPageUrl()}'"
                             class="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 tracking-wide transition-all duration-300 hover:scale-105"
                         >
                             View More Projects
@@ -420,7 +433,7 @@ class ProjectDetailPage {
         if (!this.project || !this.project.images || index >= this.project.images.length) return;
 
         this.currentImageIndex = index;
-        
+
         // Update main image
         const mainImage = document.getElementById('main-image');
         if (mainImage) {
