@@ -56,71 +56,148 @@ class ProjectDetailPage {
                 ]
             },
             // Marine projects
-            'marine-yacht-restoration': {
-                id: 'marine-yacht-restoration',
-                title: 'Luxury Yacht Interior Restoration',
-                category: 'Marine Engineering',
-                description: 'Complete interior restoration of a 45ft luxury yacht including custom woodwork and modern amenities.',
+            'wheelhouse': {
+                id: 'wheelhouse',
+                title: 'Houseboat Wheelhouse',
+                category: 'Houseboat Project',
+                description: 'Houseboat Wheelhouse.',
                 images: [
-                    'https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1566346270832-9e8f0d0df4d5?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1558489580-faa74691fdc5?w=1200&h=800&fit=crop'
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159939/IMG-20250705-WA0146_wvv072.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159941/IMG-20250705-WA0082_jpduu3.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159944/IMG-20250705-WA0102_vhiugk.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159964/IMG-20250705-WA0096_byl2cp.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159956/IMG-20250705-WA0104_ebhltq.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159981/IMG-20250705-WA0025_snrim2.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159998/IMG-20250705-WA0056_pmc1de.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159927/IMG-20250705-WA0124_ff4cby.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159925/IMG-20250705-WA0142_bx2tec.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159927/IMG-20250705-WA0078_cspv6g.jpg'
                 ]
             },
-            'marine-carbon-fiber': {
-                id: 'marine-carbon-fiber',
-                title: 'Custom Carbon Fiber Components',
-                category: 'Marine Engineering',
-                description: 'Precision-engineered carbon fiber elements for enhanced performance and aesthetic appeal.',
+            'top-deck': {
+                id: 'top-deck',
+                title: 'Houseboat Roof Deck',
+                category: 'Houseboat Project',
+                description: 'Houseboat Roof Deck.',
                 images: [
-                    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1566346270832-9e8f0d0df4d5?w=1200&h=800&fit=crop'
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160203/IMG-20250705-WA0306_p33hme.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160238/IMG-20250706-WA0003_crurwd.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160456/IMG-20250705-WA0315_pfj5yo.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160557/IMG-20250705-WA0309_vjldho.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161356/IMG-20250705-WA0311_xpmo0t.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160079/IMG-20250705-WA0305_ckjpav.jpg'
                 ]
             },
-            'marine-electrical-systems': {
-                id: 'marine-electrical-systems',
-                title: 'Marine Electrical Systems Overhaul',
-                category: 'Marine Engineering',
-                description: 'Complete electrical system upgrade with modern marine-grade components and smart controls.',
+            'boat-countertop-sink': {
+                id: 'boat-countertop-sink',
+                title: 'Boat Countertop & Sink',
+                category: 'Houseboat Project',
+                description: 'countertop and sink.',
                 images: [
-                    'https://images.unsplash.com/photo-1566346270832-9e8f0d0df4d5?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1558489580-faa74691fdc5?w=1200&h=800&fit=crop'
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159709/IMG-20250516-WA0009_cvzwhw.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159725/IMG-20250508-WA0004_fdldz0.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159725/IMG-20250508-WA0006_dtv84z.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159712/IMG-20250507-WA0001_uvp1ze.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159713/IMG-20250508-WA0002_zew6bz.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159727/IMG-20250516-WA0006_gmja2f.jpg'
                 ]
             },
-            'marine-engine-rebuild': {
-                id: 'marine-engine-rebuild',
+            'boat-move-service': {
+                id: 'boat-move-service',
+                title: 'Boat Move Service',
+                category: 'Houseboat Project',
+                description: 'Move Service.',
+                images: [
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159727/IMG-20250208-WA0002_ma4jil.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159724/IMG-20250208-WA0001_hefi6i.jpg'
+                ]
+            },
+            'boat-roof': {
+                id: 'boat-roof',
+                title: 'Boat Roof',
+                category: 'Houseboat Project',
+                description: 'Roof.',
+                images: [
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161789/IMG-20250711-WA0224_fbu1lk.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161582/IMG-20250711-WA0206_zojz6i.jpg'
+                ]
+            },
+            'boat-skylight': {
+                id: 'boat-skylight',
+                title: 'Boat Skylight',
+                category: 'Houseboat Project',
+                description: 'skylight.',
+                images: [
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160013/IMG-20250705-WA0016_we8emh.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159941/IMG-20250705-WA0074_njsvpg.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159929/IMG-20250705-WA0076_abm5sg.jpg'
+                ]
+            },
+            'boat-hull-repair': {
+                id: 'boat-hull-repair',
+                title: 'Boat Hull Repair',
+                category: 'Houseboat Project',
+                description: 'hull-repair.',
+                images: [
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161558/IMG-20250711-WA0196_gi0gfm.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161527/IMG-20250711-WA0209_nv4plw.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161510/IMG-20250711-WA0208_oe1per.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161563/IMG-20250711-WA0200_kki80s.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754162095/IMG-20250711-WA0225_mknyza.jpg'
+                ]
+            },
+            'boat-exterior': {
+                id: 'boat-exterior',
                 title: 'High-Performance Engine Rebuild',
-                category: 'Marine Engineering',
-                description: 'Complete engine rebuild with performance enhancements and reliability upgrades.',
+                category: 'Houseboat Project',
+                description: 'Boat Exterior.',
                 images: [
-                    'https://images.unsplash.com/photo-1558489580-faa74691fdc5?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1566346270832-9e8f0d0df4d5?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=800&fit=crop'
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161516/IMG-20250711-WA0222_ryehqe.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754162090/IMG-20250711-WA0233_vxjcdo.jpg'
                 ]
             },
-            'marine-navigation-systems': {
-                id: 'marine-navigation-systems',
-                title: 'Advanced Navigation System Installation',
-                category: 'Marine Engineering',
-                description: 'State-of-the-art navigation and communication systems with integrated weather monitoring.',
+            'boat-interior-refit': {
+                id: 'boat-interior-refit',
+                title: 'Boat Interior Refit',
+                category: 'Houseboat Project',
+                description: 'Boat Interior Refit.',
                 images: [
-                    'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1566346270832-9e8f0d0df4d5?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop'
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160251/IMG-20250705-WA0321_vhnio4.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160237/IMG-20250705-WA0323_jbsybu.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161259/IMG-20250705-WA0318_oxgstt.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160579/IMG-20250705-WA0319_nzgncy.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160464/IMG-20250705-WA0327_rsooha.jpg'
                 ]
             },
-            'marine-hull-restoration': {
-                id: 'marine-hull-restoration',
-                title: 'Classic Hull Restoration',
-                category: 'Marine Engineering',
-                description: 'Meticulous restoration of a classic wooden hull using traditional techniques and modern materials.',
+            'boat-bench': {
+                id: 'boat-bench',
+                title: 'Boat Bench',
+                category: 'Houseboat Project',
+                description: 'Boat Bench.',
                 images: [
-                    'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=800&fit=crop',
-                    'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop'
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161586/IMG-20250711-WA0140_s3ybky.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161586/IMG-20250711-WA0140_s3ybky.jpg'
+                ]
+            },
+            'boat-oven-fit': {
+                id: 'boat-oven-fit',
+                title: 'Boat oven fit',
+                category: 'Houseboat Project',
+                description: 'Boat oven',
+                images: [
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/project0001.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/project0001.jpg',
+                ]
+            },
+            'boat-toilet-build': {
+                id: 'boat-toilet-build',
+                title: 'Boat Toilet Build',
+                category: 'Houseboat Project',
+                description: 'Boat toilet',
+                images: [
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161564/IMG-20250711-WA0158_esmqd3.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161531/IMG-20250711-WA0153_hi95vp.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161526/IMG-20250711-WA0164_ykadkc.jpg'
                 ]
             },
             // Property projects

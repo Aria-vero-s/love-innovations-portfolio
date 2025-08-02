@@ -15,45 +15,80 @@ class MarineProjectsPage {
         // Default projects in case external loading fails
         this.projects = [
             {
-                id: 'marine-yacht-restoration',
-                title: 'Luxury Yacht Interior Restoration',
-                description: 'Complete interior restoration of a 45ft luxury yacht including custom woodwork and modern amenities.',
-                mainImage: 'https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=800&h=600&fit=crop',
+                id: 'wheelhouse',
+                title: 'Houseboat Wheelhouse',
+                description: 'Houseboat Wheelhouse.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159939/IMG-20250705-WA0146_wvv072.jpg',
                 category: 'Marine Engineering'
             },
             {
-                id: 'marine-carbon-fiber',
-                title: 'Custom Carbon Fiber Components',
-                description: 'Precision-engineered carbon fiber elements for enhanced performance and aesthetic appeal.',
-                mainImage: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop',
+                id: 'top-deck',
+                title: 'Houseboat Roof Deck',
+                description: 'Houseboat Roof Deck.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160203/IMG-20250705-WA0306_p33hme.jpg',
                 category: 'Marine Engineering'
             },
             {
-                id: 'marine-electrical-systems',
-                title: 'Marine Electrical Systems Overhaul',
-                description: 'Complete electrical system upgrade with modern marine-grade components and smart controls.',
-                mainImage: 'https://images.unsplash.com/photo-1566346270832-9e8f0d0df4d5?w=800&h=600&fit=crop',
+                id: 'boat-countertop-sink',
+                title: 'Boat Countertop & Sink',
+                description: 'Boat Countertop & Sink.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159709/IMG-20250516-WA0009_cvzwhw.jpg',
                 category: 'Marine Engineering'
             },
             {
-                id: 'marine-engine-rebuild',
-                title: 'High-Performance Engine Rebuild',
-                description: 'Complete engine rebuild with performance enhancements and reliability upgrades.',
-                mainImage: 'https://images.unsplash.com/photo-1558489580-faa74691fdc5?w=800&h=600&fit=crop',
+                id: 'boat-move-service',
+                title: 'Boat Move Service',
+                description: 'Boat Move Service',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159727/IMG-20250208-WA0002_ma4jil.jpg',
                 category: 'Marine Engineering'
             },
             {
-                id: 'marine-navigation-systems',
+                id: 'boat-roof',
+                title: 'Boat Roof',
+                description: 'Boat Roof',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161789/IMG-20250711-WA0224_fbu1lk.jpg',
+                category: 'Marine Engineering'
+            },
+            {
+                id: 'boat-skylight',
+                title: 'Boat Skylight',
+                description: 'Boat Skylight',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160013/IMG-20250705-WA0016_we8emh.jpg',
+                category: 'Marine Engineering'
+            },
+            {
+                id: 'boat-exterior',
+                title: 'Boat Exterior',
+                description: 'Boat Exterior.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161516/IMG-20250711-WA0222_ryehqe.jpg',
+                category: 'Marine Engineering'
+            },
+            {
+                id: 'boat-interior-refit',
                 title: 'Advanced Navigation System Installation',
                 description: 'State-of-the-art navigation and communication systems with integrated weather monitoring.',
                 mainImage: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&h=600&fit=crop',
                 category: 'Marine Engineering'
             },
             {
-                id: 'marine-hull-restoration',
-                title: 'Classic Hull Restoration',
-                description: 'Meticulous restoration of a classic wooden hull using traditional techniques and modern materials.',
-                mainImage: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
+                id: 'boat-bench',
+                title: 'Boat Bench',
+                description: 'Boat Bench.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161586/IMG-20250711-WA0140_s3ybky.jpg',
+                category: 'Marine Engineering'
+            },
+            {
+                id: 'boat-oven-fit',
+                title: 'Boat Oven Fit',
+                description: 'Boat Oven',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/project0001.jpg',
+                category: 'Marine Engineering'
+            },
+            {
+                id: 'boat-toilet-build',
+                title: 'Boat Toilet Build',
+                description: 'Boat toilet build',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161564/IMG-20250711-WA0158_esmqd3.jpg',
                 category: 'Marine Engineering'
             }
         ];
