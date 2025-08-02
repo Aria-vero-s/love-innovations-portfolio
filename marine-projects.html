@@ -29,16 +29,16 @@
                 <div class="hidden md:block">
                     <div class="flex items-center space-x-12">
                         <div class="flex items-center space-x-12">
-                            <button onclick="scrollToSection('about')"
+                            <button onclick="window.location.href='/#about'"
                                 class="text-muted-foreground hover:text-orange-500 transition-colors duration-200 tracking-wide">
                                 About
                             </button>
-                            <button onclick="scrollToSection('services')"
+                            <button onclick="window.location.href='/#services'"
                                 class="text-muted-foreground hover:text-orange-500 transition-colors duration-200 tracking-wide">
                                 Services
                             </button>
                         </div>
-                        <button onclick="scrollToSection('contact')"
+                        <button onclick="window.location.href='/#contact'"
                             class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 transition-all duration-200 tracking-wide">
                             Contact
                         </button>
@@ -62,14 +62,16 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="hidden md:hidden">
                 <div class="px-4 pt-4 pb-6 space-y-4 bg-background border-t border-border">
-                    <button onclick="scrollToSection('about')" class="nav-link text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                    <button onclick="window.location.href='/#about'"
+                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
                         About
                     </button>
-                    <button onclick="scrollToSection('services')" class="nav-link text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                    <button onclick="window.location.href='/#services'"
+                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
                         Services
                     </button>
-
-                    <button onclick="scrollToSection('contact')" class="nav-link bg-orange-500 hover:bg-orange-600 text-white w-full py-3 mt-4 tracking-wide">
+                    <button onclick="window.location.href='/#contact'"
+                        class="bg-orange-500 hover:bg-orange-600 text-white w-full py-3 mt-4 tracking-wide">
                         Contact
                     </button>
                     <div class="flex justify-center pt-4">
@@ -106,7 +108,7 @@
                     <div class="space-y-6">
                         <div class="marine-line w-16 h-0.5 bg-orange-500 mx-auto"></div>
                         <h1 class="text-4xl md:text-5xl text-foreground tracking-tight">
-                            01 HOUSEBOATS
+                            MARINE ENGINEERING
                         </h1>
                         <p class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                             Precision marine solutions from carbon fiber fabrication to complete electrical systems.

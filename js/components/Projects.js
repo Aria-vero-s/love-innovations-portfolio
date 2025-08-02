@@ -28,9 +28,6 @@ export default class Projects {
                     <h2 class="text-4xl md:text-5xl text-foreground tracking-tight">
                         FEATURED PROJECT
                     </h2>
-                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                        Showcasing our latest masterpiece in precision engineering and exceptional craftsmanship.
-                    </p>
                 </div>
             </div>
 

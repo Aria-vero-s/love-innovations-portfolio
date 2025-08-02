@@ -363,7 +363,7 @@ class ProjectDetailPage {
                 <div class="space-y-6">
                     <h3 class="text-2xl text-foreground tracking-tight">Interested in Similar Work?</h3>
                     <p class="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                        Every project is unique, crafted with precision and attention to detail. Contact us to discuss your vision.
+                        Every project is unique, crafted with precision and attention to detail. Get in touch to discuss your vision.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <button 
@@ -374,7 +374,7 @@ class ProjectDetailPage {
                         </button>
                         <button 
                             onclick="window.location.href='${this.getProjectsPageUrl()}'"
-                            class="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 tracking-wide transition-all duration-300 hover:scale-105"
+                            class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-10 py-4 text-lg tracking-wide transition-all duration-300 hover:scale-105 active:scale-95"
                         >
                             View More Projects
                         </button>
