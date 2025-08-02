@@ -48,11 +48,16 @@ class ProjectDetailPage {
                 category: 'Bespoke Woodwork',
                 description: 'When a client brought in her friend\'s childhood piano, Ben transformed it into a handcrafted storage chest using its original pieces. This emotional project showcases the connection between craftsmanship and memory, preserving the piano\'s history while creating something beautiful and functional.',
                 images: [
-                    './images/03_bespoke/project/thumbnail.png',
-                    './images/03_bespoke/project/thumbnail.png',
-                    './images/03_bespoke/project/thumbnail.png',
-                    './images/03_bespoke/project/thumbnail.png',
-                    './images/03_bespoke/project/thumbnail.png'
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159723/IMG-20241207-WA0012_oqxzte.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159726/IMG-20241206-WA0009_pgpb68.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159710/IMG-20241207-WA0008_zto7ja.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159709/IMG-20241206-WA0007_rqngt2.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159703/IMG-20241207-WA0010_frmzgd.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159690/IMG-20241207-WA0002_rcxkwk.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159688/IMG-20241206-WA0011_maevtk.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159688/IMG-20241207-WA0006_rxefrj.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159684/IMG-20241206-WA0005_ll3unq.jpg'
+
                 ]
             },
             // Marine projects
