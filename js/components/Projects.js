@@ -19,7 +19,6 @@ export default class Projects {
 
         this.featuredProject = featuredProject;
 
-
         return `
             <!-- Header -->
             <div class="text-center mb-20 animate-on-scroll">
@@ -32,37 +31,36 @@ export default class Projects {
             </div>
 
             <!-- Featured Project -->
-            <div class="max-w-5xl mx-auto animate-on-scroll delay-300">
+            <div class="animate-on-scroll delay-300">
                 <div class="bg-background border border-border overflow-hidden">
-                    <!-- Video Section -->
-                    <div class="relative aspect-video bg-muted">
-                        <div id="featured-video-player" class="relative w-full h-full cursor-pointer group">
-                            <img 
-                                src="${featuredProject.videoThumbnail}" 
-                                alt="${featuredProject.title}" 
-                                class="w-full h-full object-cover object-[center_20%]"
-                            />
-                            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                                <div class="w-20 h-20 bg-orange-500 hover:bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg">
-                                    <i data-lucide="play" class="w-8 h-8 text-white ml-1"></i>
+                    <div class="flex flex-col lg:flex-row">
+                        <!-- Video Section -->
+                        <div class="relative aspect-video w-full lg:w-1/2 bg-muted">
+                            <div id="featured-video-player" class="relative w-full h-full cursor-pointer group">
+                                <img 
+                                    src="${featuredProject.videoThumbnail}" 
+                                    alt="${featuredProject.title}" 
+                                    class="w-full h-full object-cover object-[center_20%]"
+                                />
+                                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                    <div class="w-20 h-20 bg-orange-500 hover:bg-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                        <i data-lucide="play" class="w-8 h-8 text-white ml-1"></i>
+                                    </div>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <button id="featured-fullscreen-btn" class="bg-black/50 hover:bg-black/70 text-white p-2 transition-colors group">
+                                        <i data-lucide="maximize" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="absolute top-4 right-4">
-                                <button id="featured-fullscreen-btn" class="bg-black/50 hover:bg-black/70 text-white p-2 transition-colors group">
-                                    <i data-lucide="maximize" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
-                                </button>
-                            </div>
+                            <video id="featured-project-video" class="w-full h-full object-cover hidden" controls>
+                                <source src="${featuredProject.videoUrl}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
-                        <video id="featured-project-video" class="w-full h-full object-cover hidden" controls>
-                            <source src="${featuredProject.videoUrl}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
 
-                    <!-- Project Information -->
-                    <div class="p-8 lg:p-12">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                            <!-- Project Details -->
+                        <!-- Project Information -->
+                        <div class="p-8 lg:p-12 w-full lg:w-1/2 flex flex-col justify-center">
                             <div class="space-y-6">
                                 <div>
                                     <h3 class="text-3xl lg:text-4xl mb-4 tracking-tight">${featuredProject.title}</h3>
@@ -70,20 +68,13 @@ export default class Projects {
                                         ${featuredProject.description}
                                     </p>
                                 </div>
-                            </div>
-
-                            <!-- Call to Action -->
-                            <div class="space-y-6">
-
-                                <div class="space-y-4">
-                                    <button 
-                                        id="view-project-details-btn"
-                                        class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 px-6 tracking-wide transition-all duration-300 hover:shadow-lg"
-                                        data-project-id="${featuredProject.id}"
-                                    >
-                                        View Project Details
-                                    </button>
-                                </div>
+                                <button 
+                                    id="view-project-details-btn"
+                                    class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 px-6 tracking-wide transition-all duration-300 hover:shadow-lg"
+                                    data-project-id="${featuredProject.id}"
+                                >
+                                    View Project Details
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -138,7 +129,6 @@ export default class Projects {
         if (!trigger || !modal || !closeBtn || !modalVid) return;
       
         trigger.addEventListener('click', () => {
-          // now this.featuredProject is defined
           modalSrc.src = this.featuredProject.videoUrl;
           modalVid.load();
       
@@ -160,7 +150,6 @@ export default class Projects {
           if (e.target === modal) doClose();
         });
       }
-      
 
     initScrollAnimations() {
         const observerOptions = {
@@ -173,7 +162,6 @@ export default class Projects {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
                     
-                    // Special handling for projects line
                     const projectsLine = entry.target.querySelector('.projects-line');
                     if (projectsLine) {
                         setTimeout(() => {
@@ -185,7 +173,6 @@ export default class Projects {
             });
         }, observerOptions);
 
-        // Observe all elements with animate-on-scroll class
         const animatedElements = document.querySelectorAll('.animate-on-scroll');
         animatedElements.forEach(element => {
             observer.observe(element);
