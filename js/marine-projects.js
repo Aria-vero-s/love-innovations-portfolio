@@ -65,9 +65,9 @@ class MarineProjectsPage {
             },
             {
                 id: 'boat-interior-refit',
-                title: 'Advanced Navigation System Installation',
-                description: 'State-of-the-art navigation and communication systems with integrated weather monitoring.',
-                mainImage: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&h=600&fit=crop',
+                title: 'Boat Interior Refit',
+                description: 'Boat Interior Refit.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160251/IMG-20250705-WA0321_vhnio4.jpg',
                 category: 'Marine Engineering'
             },
             {
