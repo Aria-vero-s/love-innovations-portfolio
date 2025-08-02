@@ -352,7 +352,6 @@ button:hover {
 }
 
 /* Video Modal Styles */
-/* hidden by default, flex when you add .flex */
 #videoModal {
   display: none;
   position: fixed;
@@ -440,7 +439,7 @@ a:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid rgb(249, 115, 22);
+  outline: 0px solid rgb(249, 115, 22);
   outline-offset: 2px;
 }
 

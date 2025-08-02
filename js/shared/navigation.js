@@ -21,20 +21,16 @@ class NavigationManager {
 
         if (toggle && menu) {
             toggle.addEventListener('click', () => {
-                isOpen = !isOpen;
-                if (isOpen) {
-                    menu.classList.remove('hidden');
-                    toggle.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
-                } else {
-                    menu.classList.add('hidden');
-                    toggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
-                }
-                
-                // Reinitialize icons
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
-            });
+                  // Toggle visibility
+                  menu.classList.toggle('hidden');
+                  const isNowOpen = !menu.classList.contains('hidden');
+                  toggle.innerHTML = isNowOpen
+                    ? '<i data-lucide="x" class="w-6 h-6"></i>'
+                    : '<i data-lucide="menu" class="w-6 h-6"></i>';
+                  if (typeof lucide !== 'undefined') {
+                      lucide.createIcons();
+                  }
+                });
 
             // Close mobile menu when clicking outside
             document.addEventListener('click', (e) => {
@@ -84,11 +80,13 @@ class NavigationManager {
 // Utility function for smooth scrolling (for homepage)
 function scrollToSection(sectionId) {
     // If we're not on the homepage, navigate there first
-    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
-        window.location.href = `/#${sectionId}`;
+    if (window.location.pathname !== '/' && !window.location.pathname.endsWith('index.html')) {
+        // Build a link relative to wherever your index.html lives
+        const base = window.location.pathname.split('/').pop(); // usually "index.html"
+        window.location.href = `${base}#${sectionId}`;
         return;
     }
-    
+
     const element = document.getElementById(sectionId);
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });

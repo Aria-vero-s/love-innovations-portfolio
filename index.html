@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Innovations</title>
-    <meta name="description"
-        content="Houseboat maintenance, property maintenance, and custom woodwork services.">
+    <meta name="description" content="Houseboat maintenance, property maintenance, and custom woodwork services.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/globals.css">
     <!-- Lucide Icons -->
@@ -15,8 +14,7 @@
 <body class="min-h-screen bg-background text-foreground dark">
 
     <!-- Navigation -->
-    <nav
-        class="fixed top-0 left-0 right-0 bg-[color:rgba(var(--nav-bg-rgb),0.25)] backdrop-blur-md border-b border-border z-50">
+    <nav id="home-navigation" class="fixed top-0 left-0 right-0 bg-[color:rgba(var(--nav-bg-rgb),0.25)] backdrop-blur-md border-b border-border z-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
@@ -63,20 +61,16 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="hidden md:hidden">
                 <div class="px-4 pt-4 pb-6 space-y-4 bg-background border-t border-border">
-                    <button onclick="scrollToSection('about')"
-                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                    <button onclick="scrollToSection('about')" class="nav-link text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
                         About
                     </button>
-                    <button onclick="scrollToSection('services')"
-                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                    <button onclick="scrollToSection('services')" class="nav-link text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
                         Projects & Services
                     </button>
-                    <button onclick="scrollToSection('testimonials')"
-                        class="text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
+                    <button onclick="scrollToSection('testimonials')" class="nav-link text-muted-foreground hover:text-orange-500 block w-full text-left py-2 tracking-wide">
                         Reviews
                     </button>
-                    <button onclick="scrollToSection('contact')"
-                        class="bg-orange-500 hover:bg-orange-600 text-white w-full py-3 mt-4 tracking-wide">
+                    <button onclick="scrollToSection('contact')" class="nav-link bg-orange-500 hover:bg-orange-600 text-white w-full py-3 mt-4 tracking-wide">
                         Contact
                     </button>
                     <div class="flex justify-center pt-4">
@@ -178,7 +172,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-background border-t border-border">
+    <footer id="site-footer" class="bg-background border-t border-border">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 
@@ -419,27 +413,15 @@
 
 
     <!-- Video Fullscreen Modal -->
-      <!-- Video Fullscreen Modal (move to index.html) -->
-    <div
-    id="videoModal"
-    class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-md hidden z-50 overflow-visible"
-    >
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-md hidden z-50 overflow-visible">
     <div class="modal-content relative max-h-[90vh]">
-        <button
-        id="closeModal"
-        class="fixed top-4 right-4 text-white text-4xl bg-black/60 rounded-full p-2 z-50"
-        >&times;</button>
-        <video
-        id="modalVideo"
-        class="h-[90vh] w-auto rounded-xl shadow-2xl mx-auto"
-        controls
-        >
+        <button id="closeModal" class="fixed top-4 right-4 text-white text-4xl bg-black/60 rounded-full p-2 z-50">&times;</button>
+        <video id="modalVideo" class="h-[90vh] w-auto rounded-xl shadow-2xl mx-auto" controls>
         <source src="./images/03_bespoke/project/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
         </video>
     </div>
     </div>
-
 
     <!-- JavaScript -->
     <script src="./js/shared/theme.js"></script>

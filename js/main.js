@@ -16,12 +16,6 @@ class LoveInnovationsApp {
         // Load all components
         await this.loadComponents();
 
-        // Initialize navigation
-        this.initNavigation();
-
-        // Initialize mobile menu
-        this.initMobileMenu();
-
         // Initialize hero animations
         this.initHeroAnimations();
 
@@ -51,67 +45,6 @@ class LoveInnovationsApp {
                 console.error(`Failed to load component ${moduleName}:`, error);
             }
         }
-    }
-
-    initNavigation() {
-        // Handle all navigation links
-        document.addEventListener('click', (e) => {
-            const target = e.target.closest('[data-section]');
-            if (target) {
-                e.preventDefault();
-                const sectionId = target.getAttribute('data-section');
-                this.scrollToSection(sectionId);
-            }
-        });
-
-        // Home logo clicks
-        document.getElementById('home-logo')?.addEventListener('click', () => {
-            this.handleBackToHome();
-        });
-
-        // Sub-navigation back to home button
-        document.getElementById('back-to-home-btn')?.addEventListener('click', () => {
-            this.handleBackToHome();
-        });
-
-        // Contact from project button
-        document.getElementById('contact-from-project')?.addEventListener('click', () => {
-            this.handleNavigateToContact();
-        });
-    }
-
-    initMobileMenu() {
-        const toggle = document.getElementById('mobile-menu-toggle');
-        const menu = document.getElementById('mobile-menu');
-        let isOpen = false;
-
-        toggle?.addEventListener('click', () => {
-            isOpen = !isOpen;
-            if (isOpen) {
-                menu.classList.remove('hidden');
-                toggle.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
-            } else {
-                menu.classList.add('hidden');
-                toggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
-            }
-
-            // Reinitialize icons
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-
-        // Close mobile menu when clicking nav links
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.nav-link') && isOpen) {
-                isOpen = false;
-                menu.classList.add('hidden');
-                toggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
-            }
-        });
     }
 
     initHeroAnimations() {

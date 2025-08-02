@@ -21,39 +21,6 @@ function initializeScrollAnimations() {
     });
 }
 
-// Initialize general interactions
-function initializeInteractions() {
-    // Mobile menu toggle
-    const mobileMenuButton = document.querySelector('[data-mobile-menu-button]');
-    const mobileMenu = document.querySelector('[data-mobile-menu]');
-    
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
-
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                const headerOffset = 100;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
 // Handle form submissions
 function handleFormSubmit(e) {
     e.preventDefault();
