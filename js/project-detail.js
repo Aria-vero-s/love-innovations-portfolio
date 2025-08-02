@@ -45,14 +45,14 @@ class ProjectDetailPage {
             'piano-chest': {
                 id: 'piano-chest',
                 title: 'Piano to Chest Transformation',
-                category: 'Heritage Restoration',
+                category: 'Bespoke Woodwork',
                 description: 'When a client brought in her friend\'s childhood piano, Ben transformed it into a handcrafted storage chest using its original pieces. This emotional project showcases the connection between craftsmanship and memory, preserving the piano\'s history while creating something beautiful and functional.',
                 images: [
-                    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-                    'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-                    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-                    'https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-                    'https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+                    './images/03_bespoke/project/thumbnail.png',
+                    './images/03_bespoke/project/thumbnail.png',
+                    './images/03_bespoke/project/thumbnail.png',
+                    './images/03_bespoke/project/thumbnail.png',
+                    './images/03_bespoke/project/thumbnail.png'
                 ]
             },
             // Marine projects

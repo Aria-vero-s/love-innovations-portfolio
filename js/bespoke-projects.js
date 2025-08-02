@@ -17,8 +17,8 @@ class BespokeProjectsPage {
             {
                 id: 'piano-chest',
                 title: 'Piano to Chest Transformation',
-                description: 'Emotional restoration transforming a childhood piano into a handcrafted storage chest, preserving memories while creating something new.',
-                mainImage: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                description: 'When a client brought in her friend\'s childhood piano, Ben transformed it into a handcrafted storage chest using its original pieces. This emotional project showcases the connection between craftsmanship and memory, preserving the piano\'s history while creating something beautiful and functional.',
+                mainImage: './images/03_bespoke/project/thumbnail.png',
                 category: 'Heritage Restoration',
                 featured: true
             },
