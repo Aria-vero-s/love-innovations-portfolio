@@ -67,15 +67,15 @@ export default class About {
                     <div class="grid grid-cols-1 gap-4 pt-6">
                         <div class="flex items-center space-x-4 group animate-on-scroll delay-300">
                             <div class="w-2 h-2 bg-orange-500 group-hover:scale-125 transition-transform duration-200"></div>
-                            <span class="text-foreground tracking-wide">Boat Maintenance & Engineering</span>
+                            <span class="text-foreground tracking-wide">Boat Maintenance</span>
                         </div>
                         <div class="flex items-center space-x-4 group animate-on-scroll delay-400">
                             <div class="w-2 h-2 bg-orange-500 group-hover:scale-125 transition-transform duration-200"></div>
-                            <span class="text-foreground tracking-wide">Property Care & Restoration</span>
+                            <span class="text-foreground tracking-wide">Property Maintenance</span>
                         </div>
                         <div class="flex items-center space-x-4 group animate-on-scroll delay-500">
                             <div class="w-2 h-2 bg-orange-500 group-hover:scale-125 transition-transform duration-200"></div>
-                            <span class="text-foreground tracking-wide">Bespoke Woodwork & Furniture</span>
+                            <span class="text-foreground tracking-wide">Custom Woodwork</span>
                         </div>
                     </div>
 
