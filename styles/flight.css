@@ -66,3 +66,48 @@
     transform: scale(1.05);
   }
   
+/* styles/flight.css */
+
+/* LIGHTBOX/MODAL */
+#image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 1rem;
+  }
+  #image-modal.open {
+    display: flex;
+  }
+  
+  /* Image inside modal */
+  #modal-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+  
+  /* Prev/Next buttons */
+  #modal-prev,
+  #modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  #modal-prev { left: 1rem; }
+  #modal-next { right: 1rem; }
+  #modal-prev i,
+  #modal-next i {
+    color: #fff;
+    width: 2rem;
+    height: 2rem;
+  }
+  

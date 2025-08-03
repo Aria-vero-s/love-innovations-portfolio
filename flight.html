@@ -118,6 +118,28 @@
     <!-- JS will inject each <section> here -->
   </main>
 
+    <!-- IMAGE LIGHTBOX MODAL -->
+    <div id="image-modal" onclick="flightPage.closeImageModal()">
+      <button
+        id="modal-prev"
+        onclick="event.stopPropagation(); flightPage.prevImageModal();"
+        aria-label="Previous image"
+      >
+        <i data-lucide="chevron-left"></i>
+      </button>
+  
+      <img id="modal-image" src="" alt="Enlarged project image" onclick="event.stopPropagation();" />
+  
+      <button
+        id="modal-next"
+        onclick="event.stopPropagation(); flightPage.nextImageModal();"
+        aria-label="Next image"
+      >
+        <i data-lucide="chevron-right"></i>
+      </button>
+    </div>
+  
+
     <!-- Footer -->
     <footer class="bg-background border-t border-border">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
