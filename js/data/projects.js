@@ -151,6 +151,27 @@ export const allProjects = {
             "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159727/IMG-20250516-WA0006_gmja2f.jpg"
         ]
     },
+    "ariane-boat": {
+        id: "ariane-boat",
+        title: "Full Boat Renovation",
+        category: "Houseboat Project",
+        description: "This extensive boat renovation addressed both structural and aesthetic upgrades. Engine issues were repaired, and the exterior received a fresh marine-grade gel coat. A new canopy was installed after the original was lost, and the back deck was rebuilt to include extra storage. Inside, the water tank and entire kitchen unit—countertop, sink, and cabinetry—were replaced. The bathroom was repainted, and the ceiling redone with modern puck lighting. The solar panel system was rewired with hidden cables integrated into the ceiling. Small, impractical closets were removed to create more seating, and a partial wall at the front was taken out to create an open-concept layout. Windows were also re-bedded for a secure, watertight finish. The result is a fully refreshed, functional, and more spacious liveaboard.",
+        images: [
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231710/IMG-20250406-WA0038_xikhjd.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231719/IMG_3154_vg2thh.png",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231700/IMG_1188_t9nhdo.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231704/IMG-20250406-WA0013_1_hfrh8l.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231700/IMG_3151_a2ixul.png",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231704/IMG-20250406-WA0016_svladj.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231699/IMG_3152_z6fwvu.png",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231704/IMG-20250406-WA0018_vtsqxn.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231734/IMG_1924_bwjmhh.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231707/IMG-20250406-WA0034_bsle5u.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231703/IMG-20250406-WA0020_f64qni.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231702/IMG-20250406-WA0012_krnrlo.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754231699/IMG-20250406-WA0011_jp6exk.jpg"
+        ]
+    },
     "boat-move-service": {
         id: "boat-move-service",
         title: "Boat Moving Service",
