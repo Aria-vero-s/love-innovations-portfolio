@@ -68,7 +68,7 @@ export default class Contact {
                                     id="name" 
                                     name="name" 
                                     required 
-                                    class="w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
+                                    class="text-black w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
                                     placeholder="Your full name"
                                 >
                             </div>
@@ -79,7 +79,7 @@ export default class Contact {
                                     id="email" 
                                     name="email" 
                                     required 
-                                    class="w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
+                                    class="text-black w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
                                     placeholder="your.email@example.com"
                                 >
                             </div>
@@ -91,7 +91,7 @@ export default class Contact {
                                 type="tel" 
                                 id="phone" 
                                 name="phone" 
-                                class="w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
+                                class="text-black w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors"
                                 placeholder="+44 7XXX XXXXXX"
                             >
                         </div>
@@ -103,7 +103,7 @@ export default class Contact {
                                 name="message" 
                                 rows="5" 
                                 required 
-                                class="w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors resize-vertical"
+                                class="text-black w-full px-4 py-3 bg-background border border-border focus:border-orange-500 focus:outline-none transition-colors resize-vertical"
                                 placeholder="Please describe your project in detail. Include any specific requirements, materials preferences, or questions you have..."
                             ></textarea>
                         </div>

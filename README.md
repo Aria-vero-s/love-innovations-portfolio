@@ -1,8 +1,10 @@
 # Love Innovations Portfolio
 
-A lightweight, responsive, and visually engaging portfolio website for a multi-skilled tradesman specializing in houseboat maintenance, property renovation, and bespoke woodworking. The site is designed as a static HTML/CSS/JS project with modular JavaScript components and Tailwind CSS.
+![Mockup](./images/mockup.png)
 
-## 🌐 Live Preview
+A portfolio website for a multi-skilled engineer specializing in houseboat maintenance, property renovation, and custom woodworking. The site is designed as a static HTML/CSS/JS project with modular JavaScript components and Tailwind CSS.
+
+## Live Preview
 
 > _Domain Link Coming soon..._  
 [live link](https://aria-vero-s.github.io/love-innovations-portfolio/)
@@ -11,30 +13,30 @@ To deploy locally, follow the instructions below.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
-├── index.html                   # Homepage (landing with navigation and hero section)
-├── marine-projects.html        # Marine services portfolio page
-├── property-projects.html      # Property renovation portfolio page
-├── bespoke-projects.html       # Custom woodwork portfolio page
-├── project-detail.html         # Dynamic single project view
-├── privacy-policy.html         # Privacy policy page
-├── terms-of-service.html       # Terms and conditions
+├── index.html
+├── marine-projects.html
+├── property-projects.html
+├── bespoke-projects.html
+├── project-detail.html
+├── privacy-policy.html
+├── terms-of-service.html
 ├── styles/
-│   └── globals.css             # Global Tailwind styles
+│   └── globals.css
 ├── js/
-│   ├── main.js                 # Script loader
-│   ├── home.js                 # Homepage interactions
-│   ├── project-detail.js       # Fullscreen modal, video, image logic
-│   ├── marine-projects.js      # Data loader for marine projects
-│   ├── property-projects.js    # Data loader for property projects
-│   ├── bespoke-projects.js     # Data loader for custom builds
-│   ├── utils.js                # Utility functions
+│   ├── main.js
+│   ├── home.js
+│   ├── project-detail.js
+│   ├── marine-projects.js
+│   ├── property-projects.js
+│   ├── bespoke-projects.js
+│   ├── utils.js
 │   ├── data/
-│   │   └── projects.js         # JSON-like project data
-│   ├── components/             # Modular components
+│   │   └── projects.js
+│   ├── components/
 │   │   ├── About.js
 │   │   ├── Contact.js
 │   │   ├── Services.js
@@ -42,32 +44,77 @@ To deploy locally, follow the instructions below.
 │   │   ├── Testimonials.js
 │   │   └── ImageWithFallback.js
 │   └── shared/
-│       ├── navigation.js       # Mobile nav, theme toggle
-│       └── theme.js            # Dark/light mode support
+│       ├── navigation.js
+│       └── theme.js
 ├── fonts/
 │   ├── Ethnocentric-Regular.woff
 │   └── Ethnocentric-Italic.woff
-├── images/                     # All project media and profile assets
+├── images/
 │   ├── 01_marine/
 │   ├── 02_property/
 │   ├── 03_bespoke/
 │   └── profile.jpg, flight2.jpeg
-└── templates/                  # (reserved for future templating/partials)
+└── templates/
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **HTML5** – Semantic structure and accessibility
 - **Tailwind CSS** – Utility-first styling
 - **JavaScript** – Vanilla JS with modular ES6 components
+- **Formspree** – For secure contact form submissions
 - **Lucide Icons** – Icon library for UI elements
 - **Responsive Design** – Mobile-first and accessible layout
 
 ---
 
-## 🔧 Getting Started
+## Features
+
+- Hero section with animations and CTA buttons
+- An 'About' section with a popup modal for extra details
+- A 'What to Expect' section with sequentially animated steps that highlight and change color one at a time
+- Modular project listing per category: marine, property, bespoke. Each individual project has a description and an image gallery.
+- Fullscreen media viewer for project images and video
+- Dark/light mode toggle with persistent preference
+- A featured project section with a video
+- A 'Testimonials' section with stats underneath
+- Contact form integrated with [Formspree](https://formspree.io/)
+- Footer and Navigation accessible all pages
+- Legal pages: Privacy & Terms
+- Mobile reponsivity & navigation
+
+---
+
+## UI/UX Design
+
+The design behind this project is clean, minimal, and modern with subtle interactive motion.
+
+- **Branding & Visual Design**
+  - Use of custom fonts: *Ethnocentric-Regular* and *Ethnocentric-Italic* for logo and headers
+  - Body text fonts: *Nunito Sans* and *Open Sans* imported from Google Fonts for readability
+  - Color palette illustrated below:
+  
+    ![Color Palette](./images/palette(1).png)
+  
+  - Dark mode support with inverse color scheme for night reading comfort
+
+## Future Improvements
+
+- Add before/after feature
+- CMS or static site generator integration (e.g., Eleventy)
+- SEO and meta tag optimization
+
+---
+
+## License
+
+All images and video content are property of the business owner. Not for commercial redistribution.
+
+---
+
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -89,32 +136,7 @@ Then open `http://localhost:8000` in your browser.
 
 ---
 
-## Features
-
-- ⚓ Hero section with parallax effect
-- Modular project listing per category: marine, property, bespoke
-- Fullscreen media viewer for project images and video
-- Dark mode toggle with persistent preference
-- Mobile navigation with smooth transitions
-- Legal pages: Privacy & Terms
-
----
-
-## Future Improvements
-
-- Add contact form with Formspree integration
-- CMS or static site generator integration (e.g., Eleventy)
-- SEO and meta tag optimization
-
----
-
-## 📄 License
-
-All images and video content are property of the business owner. Not for commercial redistribution.
-
----
-
-## 🤝 Credits
+## Credits
 
 Developed by **Ariane Saulnier**  
 Design, layout, and structure handcrafted for **Love Innovations** (Ben Love)
