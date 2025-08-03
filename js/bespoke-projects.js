@@ -1,4 +1,7 @@
 // Bespoke projects page functionality
+
+import { allProjects } from './data/projects.js';
+
 class BespokeProjectsPage {
     constructor() {
         this.projects = [];
@@ -12,101 +15,22 @@ class BespokeProjectsPage {
     }
 
     async loadProjects() {
-        // Default projects in case external loading fails
-        this.projects = [
-            {
-                id: 'piano-chest',
-                title: 'Piano to Chest Transformation',
-                description: 'When a client brought in her friend\'s childhood piano, Ben transformed it into a handcrafted storage chest using its original pieces. This emotional project showcases the connection between craftsmanship and memory, preserving the piano\'s history while creating something beautiful and functional.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159723/IMG-20241207-WA0012_oqxzte.jpg',
-                category: 'Heritage Restoration',
-                featured: true
-            },
-            {
-                id: 'ceiling-medallion',
-                title: 'Handpainted Ceiling Medallion',
-                description: 'Ceiling Medallion.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754178190/WhatsApp_Image_2025-08-03_at_12.45.30_AM_1_vohux9.jpg',
-                category: 'Bespoke Craftsmanship'
-            },
-            {
-                id: 'custom-window-build',
-                title: 'Custom Window',
-                description: 'Complete loft conversion creating a master suite with ensuite and dressing area.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161949/IMG-20250711-WA0143_figtpp.jpg',
-                category: 'Bespoke Craftsmanship'
-            },
-            {
-                id: 'black-door',
-                title: 'Door Repair & Upgrade',
-                description: 'Door.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161529/IMG-20250711-WA0183_bwp5ls.jpg',
-                category: 'Bespoke Craftsmanship'
-            },
-            {
-                id: 'guitar',
-                title: 'Guitar Project',
-                description: 'Guitar.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159710/IMG-20250311-WA0002_xda9zw.jpg',
-                category: 'Bespoke Craftsmanship'
-            },
-            {
-                id: 'sanding-job',
-                title: 'Door Restoration',
-                description: 'Solid wood Door restoration.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159726/IMG-20250531-WA0007_skn1fx.jpg',
-                category: 'Bespoke Craftsmanship'
-            },
-            {
-                id: 'vertical-storage',
-                title: 'Vertical Storage',
-                description: 'Vertical Storage.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754162098/IMG-20250711-WA0195_ujqexw.jpg',
-                category: 'Bespoke Craftsmanship'
-            }
-        ];
-
-        // Try to load external project data
-        try {
-            const bespokeProjects = await Promise.allSettled([
-                fetch('/data/projects/bespoke/dining-table.json'),
-                fetch('/data/projects/bespoke/library-shelving.json')
-            ]);
-
-            const loadedProjects = [];
-            for (const result of bespokeProjects) {
-                if (result.status === 'fulfilled' && result.value.ok) {
-                    try {
-                        const project = await result.value.json();
-                        loadedProjects.push(project);
-                    } catch (e) {
-                        console.log('Failed to parse project JSON');
-                    }
-                }
-            }
-
-            // If we loaded any external projects, use them to enhance our defaults
-            if (loadedProjects.length > 0) {
-                // Keep piano-chest as first project and merge with loaded projects
-                const pianoChest = this.projects.find(p => p.id === 'piano-chest');
-                const otherDefaults = this.projects.filter(p => p.id !== 'piano-chest');
-                
-                // Update existing projects with loaded data
-                loadedProjects.forEach(loaded => {
-                    const index = otherDefaults.findIndex(p => p.id === loaded.id);
-                    if (index !== -1) {
-                        otherDefaults[index] = { ...otherDefaults[index], ...loaded };
-                    } else {
-                        otherDefaults.push(loaded);
-                    }
-                });
-                
-                this.projects = [pianoChest, ...otherDefaults];
-            }
-        } catch (error) {
-            console.log('Using default bespoke projects data');
-        }
+        // Bespoke
+        this.projects = Object.values(allProjects)
+            .filter(p => p.category === 'Bespoke Project')
+            .map(p => ({
+                id: p.id,
+                title: p.title,
+                description: p.description,
+                shortDescription:
+                    p.description.length > 50
+                        ? p.description.slice(0, 100) + '…'
+                        : p.description,
+                mainImage: p.images[0],
+                category: p.category
+            }));
     }
+
 
     renderProjects() {
         const container = document.getElementById('projects-grid');
@@ -134,7 +58,7 @@ class BespokeProjectsPage {
                             <div class="text-xs text-orange-500 tracking-wide mb-2 uppercase">${project.category || 'Bespoke Craftsmanship'}</div>
                             <h3 class="text-xl mb-3 leading-tight">${project.title}</h3>
                             <p class="text-muted-foreground text-sm mb-4 leading-relaxed">
-                                ${project.description}
+                                ${project.shortDescription}
                             </p>
                         </div>
                         <div class="flex items-center text-orange-500 text-sm mt-auto">
@@ -171,7 +95,7 @@ class BespokeProjectsPage {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
-                    
+
                     // Special handling for bespoke line
                     const bespokeLine = entry.target.querySelector('.bespoke-line');
                     if (bespokeLine) {

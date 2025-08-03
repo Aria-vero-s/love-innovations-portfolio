@@ -110,6 +110,19 @@
         </section>
     </main>
 
+    <!-- IMAGE LIGHTBOX MODAL -->
+    <div id="image-modal" onclick="window.projectDetailPage.closeImageModal()">
+        <button id="modal-prev" onclick="event.stopPropagation(); window.projectDetailPage.prevImageModal();" aria-label="Previous image">
+        <i data-lucide="chevron-left" class="w-8 h-8 text-white"></i>
+        </button>
+    
+        <img id="modal-image" src="" alt="Enlarged project image">
+    
+        <button id="modal-next" onclick="event.stopPropagation(); window.projectDetailPage.nextImageModal();" aria-label="Next image">
+        <i data-lucide="chevron-right" class="w-8 h-8 text-white"></i>
+        </button>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-background border-t border-border">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
@@ -185,7 +198,8 @@
     <!-- JavaScript -->
     <script src="./js/shared/theme.js"></script>
     <script src="./js/shared/navigation.js"></script>
-    <script src="./js/project-detail.js"></script>
+    <script type="module" src="js/project-detail.js"></script>
+
 </body>
 
 </html>

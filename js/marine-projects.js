@@ -1,4 +1,7 @@
 // Marine projects page functionality
+
+import { allProjects } from './data/projects.js';
+
 class MarineProjectsPage {
     constructor() {
         this.projects = [];
@@ -12,114 +15,20 @@ class MarineProjectsPage {
     }
 
     async loadProjects() {
-        // Default projects in case external loading fails
-        this.projects = [
-            {
-                id: 'wheelhouse',
-                title: 'Houseboat Wheelhouse',
-                description: 'Houseboat Wheelhouse.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159939/IMG-20250705-WA0146_wvv072.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'top-deck',
-                title: 'Houseboat Roof Deck',
-                description: 'Houseboat Roof Deck.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160203/IMG-20250705-WA0306_p33hme.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'boat-countertop-sink',
-                title: 'Boat Countertop & Sink',
-                description: 'Boat Countertop & Sink.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159709/IMG-20250516-WA0009_cvzwhw.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'boat-move-service',
-                title: 'Boat Move Service',
-                description: 'Boat Move Service',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159727/IMG-20250208-WA0002_ma4jil.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'boat-roof',
-                title: 'Boat Roof',
-                description: 'Boat Roof',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161789/IMG-20250711-WA0224_fbu1lk.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'boat-skylight',
-                title: 'Boat Skylight',
-                description: 'Boat Skylight',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160013/IMG-20250705-WA0016_we8emh.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'boat-exterior',
-                title: 'Boat Exterior',
-                description: 'Boat Exterior.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161516/IMG-20250711-WA0222_ryehqe.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'boat-interior-refit',
-                title: 'Boat Interior Refit',
-                description: 'Boat Interior Refit.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160251/IMG-20250705-WA0321_vhnio4.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'boat-oven-fit',
-                title: 'Boat Oven Fit',
-                description: 'Boat Oven',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/project0001.jpg',
-                category: 'Marine Engineering'
-            },
-            {
-                id: 'boat-toilet-build',
-                title: 'Boat Toilet Build',
-                description: 'Boat toilet build',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161564/IMG-20250711-WA0158_esmqd3.jpg',
-                category: 'Marine Engineering'
-            }
-        ];
-
-        // Try to load external project data
-        try {
-            const marineProjects = await Promise.allSettled([
-                fetch('/data/projects/marine/yacht-restoration.json'),
-                fetch('/data/projects/marine/engine-rebuild.json')
-            ]);
-
-            const loadedProjects = [];
-            for (const result of marineProjects) {
-                if (result.status === 'fulfilled' && result.value.ok) {
-                    try {
-                        const project = await result.value.json();
-                        loadedProjects.push(project);
-                    } catch (e) {
-                        console.log('Failed to parse project JSON');
-                    }
-                }
-            }
-
-            // If we loaded any external projects, use them to enhance our defaults
-            if (loadedProjects.length > 0) {
-                // Update existing projects with loaded data
-                loadedProjects.forEach(loaded => {
-                    const index = this.projects.findIndex(p => p.id === loaded.id);
-                    if (index !== -1) {
-                        this.projects[index] = { ...this.projects[index], ...loaded };
-                    } else {
-                        this.projects.push(loaded);
-                    }
-                });
-            }
-        } catch (error) {
-            console.log('Using default marine projects data');
-        }
+        // Narine
+        this.projects = Object.values(allProjects)
+            .filter(p => p.category === 'Houseboat Project')
+            .map(p => ({
+                id: p.id,
+                title: p.title,
+                description: p.description,
+                shortDescription:
+                    p.description.length > 50
+                        ? p.description.slice(0, 100) + '…'
+                        : p.description,
+                mainImage: p.images[0],
+                category: p.category
+            }));
     }
 
     renderProjects() {
@@ -138,10 +47,10 @@ class MarineProjectsPage {
                     </div>
                     <div class="p-6 flex flex-col justify-between flex-grow">
                         <div>
-                            <div class="text-xs text-orange-500 tracking-wide mb-2 uppercase">Marine Engineering</div>
+                            <div class="text-xs text-orange-500 tracking-wide mb-2 uppercase">Houseboat Project</div>
                             <h3 class="text-xl mb-3 leading-tight">${project.title}</h3>
                             <p class="text-muted-foreground text-sm mb-4 leading-relaxed">
-                                ${project.description}
+                                ${project.shortDescription}
                             </p>
                         </div>
                         <div class="flex items-center text-orange-500 text-sm mt-auto">
@@ -178,7 +87,7 @@ class MarineProjectsPage {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
-                    
+
                     // Special handling for marine line
                     const marineLine = entry.target.querySelector('.marine-line');
                     if (marineLine) {
