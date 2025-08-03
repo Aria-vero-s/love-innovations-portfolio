@@ -59,7 +59,7 @@ export default class Contact {
 
                 <!-- Contact Form -->
                 <div class="animate-on-scroll delay-400">
-                    <form id="contact-form" class="space-y-6">
+                    <form id="contact-form" action="https://formspree.io/f/xrbbolzo" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-sm text-muted-foreground mb-2">Name *</label>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .before-after {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 500px;
+            overflow: hidden;
+            cursor: ew-resize;
+            margin: 0 auto;
+            border-radius: 10px;
+            aspect-ratio: 16 / 9;
+            /* keeps a consistent height relative to width */
+            overflow: hidden;
+        }
+
+        .image {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .before img,
+        .after img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .after {
+            clip-path: inset(0 0 0 50%);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            /* no transform here! */
+            /* width stays at 30px (or whatever your hit area is) */
+            width: 30px;
+            background: transparent;
+            cursor: ew-resize;
+            z-index: 2;
+        }
+
+        .slider-handle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            /* halfway through the 30px */
+            width: 4px;
+            transform: translateX(-50%);
+            background-color: var(--bright);
+        }
+
+
+        @media (pointer: coarse) {
+            .slider-handle {
+                width: 40px;
+                /* bigger for fat thumbs */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 100%;
+                height: auto;
+            }
+
+            .slider-handle {
+                width: 8px;
+            }
+        }
+
+        .slider-container,
+        .slider-container * {
+            user-select: none;
+            /* Standard */
+            -webkit-user-select: none;
+            /* Safari/Chrome */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* IE10+ */
+            -webkit-user-drag: none;
+            /* Prevent image dragging */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="before-after">
+        <h1>Before & After</h1>
+        <div class="slider-container">
+            <div class="image before">
+                <img src="before.jpg" alt="Before">
+            </div>
+            <div class="image after">
+                <img src="after.jpg" alt="After">
+            </div>
+            <div class="slider-handle"></div>
+        </div>
+    </div>
+    <script>
+        // Wrap everything so you can drop this at the bottom of your <body>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.slider-container');
+            const sliderHandle = document.querySelector('.slider-handle');
+            const afterImage = document.querySelector('.after');
+            let isDragging = false;
+
+            // Calculate the handle’s hit‑area & inner‑line offset
+            const handleWidth = sliderHandle.offsetWidth;  // e.g. 30px
+            const lineOffset = handleWidth / 2;           // center of that hit‑area
+
+            // A helper that positions both the handle *and* the clip in one go
+            function updatePosition(xPos) {
+                // clamp between [lineOffset, containerWidth - lineOffset]
+                const { left, width } = container.getBoundingClientRect();
+                let x = xPos - left;
+                x = Math.max(lineOffset, Math.min(x, width - lineOffset));
+
+                // position the *left edge* of your 30px (or whatever) handle
+                sliderHandle.style.left = `${x - lineOffset}px`;
+                // clip exactly at the centerline
+                afterImage.style.clipPath = `inset(0 0 0 ${x}px)`;
+            }
+
+            // INITIALIZE at 50/50
+            const { width: cW, left: cL } = container.getBoundingClientRect();
+            const mid = cL + cW / 2;
+            updatePosition(mid);
+
+            // DRAG START / STOP
+            const startDrag = e => {
+                e.preventDefault();
+                isDragging = true;
+            };
+            const stopDrag = () => {
+                isDragging = false;
+            };
+
+            sliderHandle.addEventListener('mousedown', startDrag);
+            document.addEventListener('touchstart', startDrag);
+            document.addEventListener('mouseup', stopDrag);
+            document.addEventListener('touchend', stopDrag);
+
+            // MOVE HANDLER
+            const handleMove = e => {
+                if (!isDragging) return;
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                updatePosition(clientX);
+            };
+
+            document.addEventListener('mousemove', handleMove);
+            document.addEventListener('touchmove', handleMove);
+        });
+
+    </script>
+</body>
+
+</html>
