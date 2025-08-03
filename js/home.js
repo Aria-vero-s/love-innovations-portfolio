@@ -1,3 +1,5 @@
+// js/home.js
+
 // Home page functionality
 class HomePage {
     constructor() {
@@ -19,6 +21,7 @@ class HomePage {
                 'About',
                 'Services', 
                 'Projects',
+                'FeaturedFlight',
                 'Testimonials',
                 'Contact'
             ];
@@ -56,6 +59,13 @@ class HomePage {
             this.components.Projects.bindEvents();
         }
 
+        // Render Featured Flight section
+        if (this.components.FeaturedFlight) {
+            const flightContainer = document.querySelector('#flight-featured .content-container');
+            flightContainer.innerHTML = await this.components.FeaturedFlight.render();
+            this.components.FeaturedFlight.bindEvents();
+        }
+
         // Render Testimonials section
         if (this.components.Testimonials) {
             const testimonialsContainer = document.querySelector('#testimonials .max-w-7xl');
@@ -91,7 +101,7 @@ class HomePage {
     }
 
     initHeroAnimations() {
-        // Hero entrance animations
+        // Hero entrance animations (unchanged)...
         const heroElements = {
             bg: document.querySelector('.hero-bg'),
             overlay: document.querySelector('.hero-overlay'),

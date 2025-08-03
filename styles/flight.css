@@ -1,0 +1,68 @@
+/* styles/flight.css */
+
+/* Scope all rich‐text under this class */
+.flight-content {
+    /* ensure it spans full container width */
+    width: 100%;
+  }
+  
+  /* Paragraphs */
+  .flight-content p {
+    margin: 1em 0;
+    line-height: 1.7;
+  }
+  
+  /* Unordered lists */
+  .flight-content ul {
+    margin: 1em 0 1em 1.5em;
+    padding: 0;
+    list-style-type: disc;
+  }
+  
+  .flight-content ul li {
+    margin: 0.5em 0;
+  }
+  
+  /* Ordered lists */
+  .flight-content ol {
+    margin: 1em 0 1em 1.5em;
+    padding: 0;
+    list-style-type: decimal;
+  }
+  
+  .flight-content ol li {
+    margin: 0.5em 0;
+  }
+  
+  /* Blockquotes */
+  .flight-content blockquote {
+    border-left: 4px solid #f97316; /* Tailwind’s orange-500 */
+    padding-left: 1em;
+    margin: 1em 0;
+    color: #6b7280; /* Tailwind’s gray-500 */
+    font-style: italic;
+    background-color: rgba(249, 115, 22, 0.05);
+  }
+  
+  /* Time elements */
+  .flight-content time {
+    font-weight: bold;
+    color: #d97706; /* Tailwind’s amber-600 */
+  }
+  
+  /* Headings within content */
+  .flight-content h3, .flight-content h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  
+  /* Images in galleries get a little hover lift */
+  .flight-content img {
+    transition: transform 0.3s ease;
+  }
+  
+  .flight-content img:hover {
+    transform: scale(1.05);
+  }
+  
