@@ -73,6 +73,18 @@ class ProjectDetailPage {
         this.currentImageIndex = 0;
 
         container.innerHTML = `
+                <!-- Back to Home Button -->
+        <div class="absolute top-20 left-0 right-0 bg-card/95 z-40">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="py-4">
+                    <button onclick="window.location.href='${this.getProjectsPageUrl()}'"
+                        class="flex items-center text-muted-foreground hover:text-orange-500 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                        <span class="tracking-wide">Back to Projects</span>
+                    </button>
+                </div>
+            </div>
+        </div>
             <!-- Project Header -->
             <div class="text-center mb-16 animate-on-scroll">
                 <div class="space-y-6">

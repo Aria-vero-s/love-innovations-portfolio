@@ -19,6 +19,20 @@ export const allProjects = {
             "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159684/IMG-20241206-WA0005_ll3unq.jpg"
         ]
     },
+    "top-deck": {
+        id: "top-deck",
+        title: "Houseboat Roof Deck",
+        category: "Bespoke Project",
+        description: "This project added a brand-new roof deck to the houseboat where none existed before, creating valuable outdoor space. A custom storage box was integrated into the design, topped with a solar panel to maximize functionality without sacrificing space. To personalize the deck, a small decorative statue—similar to a classic car hood ornament—was installed as a unique finishing touch, adding character and charm.",
+        images: [
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160203/IMG-20250705-WA0306_p33hme.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160238/IMG-20250706-WA0003_crurwd.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160456/IMG-20250705-WA0315_pfj5yo.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160557/IMG-20250705-WA0309_vjldho.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161356/IMG-20250705-WA0311_xpmo0t.jpg",
+            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160079/IMG-20250705-WA0305_ckjpav.jpg"
+        ]
+    },
     "ceiling-medallion": {
         id: "ceiling-medallion",
         title: "Handpainted Ceiling Medallion",
@@ -121,20 +135,6 @@ export const allProjects = {
             "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159927/IMG-20250705-WA0124_ff4cby.jpg",
             "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159925/IMG-20250705-WA0142_bx2tec.jpg",
             "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159927/IMG-20250705-WA0078_cspv6g.jpg"
-        ]
-    },
-    "top-deck": {
-        id: "top-deck",
-        title: "Houseboat Roof Deck",
-        category: "Houseboat Project",
-        description: "This project added a brand-new roof deck to the houseboat where none existed before, creating valuable outdoor space. A custom storage box was integrated into the design, topped with a solar panel to maximize functionality without sacrificing space. To personalize the deck, a small decorative statue—similar to a classic car hood ornament—was installed as a unique finishing touch, adding character and charm.",
-        images: [
-            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160203/IMG-20250705-WA0306_p33hme.jpg",
-            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160238/IMG-20250706-WA0003_crurwd.jpg",
-            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160456/IMG-20250705-WA0315_pfj5yo.jpg",
-            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160557/IMG-20250705-WA0309_vjldho.jpg",
-            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161356/IMG-20250705-WA0311_xpmo0t.jpg",
-            "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160079/IMG-20250705-WA0305_ckjpav.jpg"
         ]
     },
     "boat-countertop-sink": {
