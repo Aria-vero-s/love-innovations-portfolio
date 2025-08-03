@@ -166,10 +166,45 @@ class ProjectDetailPage {
             this.openImageModal(this.currentImageIndex);
           });
         }
+
+        // SWIPE SUPPORT
+        this._touchStartX = 0;
+        this._touchEndX = 0;
+        const modal = document.getElementById('image-modal');
+        modal.addEventListener('touchstart', this.handleTouchStart.bind(this), false);
+        modal.addEventListener('touchmove', this.handleTouchMove.bind(this), false);
+        modal.addEventListener('touchend', this.handleTouchEnd.bind(this), false);
+        
         // re-create Lucide icons in modal arrows
         if (typeof lucide !== 'undefined') {
           lucide.createIcons();
         }
+      }
+
+      handleTouchStart(evt) {
+        this._touchStartX = evt.changedTouches[0].screenX;
+      }
+    
+      handleTouchMove(evt) {
+        this._touchEndX = evt.changedTouches[0].screenX;
+      }
+    
+      handleTouchEnd() {
+        const deltaX = this._touchEndX - this._touchStartX;
+        const SWIPE_THRESHOLD = 50; // px
+    
+        if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
+          if (deltaX > 0) {
+            // swipe right → previous image
+            this.prevImageModal();
+          } else {
+            // swipe left → next image
+            this.nextImageModal();
+          }
+        }
+        // reset for next gesture
+        this._touchStartX = 0;
+        this._touchEndX = 0;
       }
     
       openImageModal(index) {

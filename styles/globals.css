@@ -562,3 +562,13 @@ textarea:focus {
 #image-modal button:hover i {
   opacity: 1;
 }
+
+@media (max-width: 640px) {
+  /* Force the image to fill full viewport height, width scales auto */
+  #image-modal img {
+    height: 100vh;
+    width: auto;
+    max-width: none;
+    max-height: none;
+  }
+}
