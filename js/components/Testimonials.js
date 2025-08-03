@@ -5,21 +5,21 @@ export default class Testimonials {
         const testimonials = [
             {
                 rating: 5,
-                text: "Ben's engineering background really shows in his work. The attention to detail on our boat's carbon fiber repairs was exceptional. Professional, reliable, and incredibly skilled.",
+                text: "Ben’s work on our custom wheelhouse perfectly balanced style and function. The opening windows were a great touch, and the craftsmanship was top-notch. We’re very pleased.",
                 author: "James Mitchell",
                 role: "Houseboat Owner",
                 initials: "JM"
             },
             {
                 rating: 5,
-                text: "Transformed our Victorian property while maintaining its character. Ben's approach combines traditional craftsmanship with modern engineering - exactly what we needed.",
+                text: "The entryway renovation transformed our home’s curb appeal. Ben’s careful repairs and repainting preserved the character while giving it a fresh look.",
                 author: "Sarah Thompson",
                 role: "Property Developer",
                 initials: "ST"
             },
             {
                 rating: 5,
-                text: "The dining table Ben created is a masterpiece. His precision and attention to detail are remarkable. It's clear he takes pride in every aspect of his craft.",
+                text: "Ben’s bespoke kitchen cabinets cleverly hid plumbing and added useful shelving. His craftsmanship really improved the space and flow.",
                 author: "Robert Chen",
                 role: "Homeowner",
                 initials: "RC"
