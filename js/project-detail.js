@@ -174,16 +174,6 @@ class ProjectDetailPage {
                     'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160464/IMG-20250705-WA0327_rsooha.jpg'
                 ]
             },
-            'boat-bench': {
-                id: 'boat-bench',
-                title: 'Boat Bench',
-                category: 'Houseboat Project',
-                description: 'Boat Bench.',
-                images: [
-                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161586/IMG-20250711-WA0140_s3ybky.jpg',
-                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161586/IMG-20250711-WA0140_s3ybky.jpg'
-                ]
-            },
             'boat-oven-fit': {
                 id: 'boat-oven-fit',
                 title: 'Boat oven fit',
@@ -191,7 +181,7 @@ class ProjectDetailPage {
                 description: 'Boat oven',
                 images: [
                     'https://res.cloudinary.com/dbb4fkwfx/image/upload/project0001.jpg',
-                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/project0001.jpg',
+                    'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161586/IMG-20250711-WA0140_s3ybky.jpg'
                 ]
             },
             'boat-toilet-build': {

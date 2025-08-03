@@ -71,13 +71,6 @@ class MarineProjectsPage {
                 category: 'Marine Engineering'
             },
             {
-                id: 'boat-bench',
-                title: 'Boat Bench',
-                description: 'Boat Bench.',
-                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161586/IMG-20250711-WA0140_s3ybky.jpg',
-                category: 'Marine Engineering'
-            },
-            {
                 id: 'boat-oven-fit',
                 title: 'Boat Oven Fit',
                 description: 'Boat Oven',
