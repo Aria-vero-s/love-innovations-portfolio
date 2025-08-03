@@ -15,45 +15,80 @@ class PropertyProjectsPage {
         // Default projects in case external loading fails
         this.projects = [
             {
-                id: 'property-victorian-renovation',
-                title: 'Victorian House Restoration',
-                description: 'Complete restoration maintaining period character while adding modern functionality and efficiency.',
-                mainImage: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop',
+                id: 'property-entryway',
+                title: 'Property Entryway',
+                description: 'Complete entryway renovation.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754160091/IMG-20250706-WA0001_gps7so.jpg',
                 category: 'Property Excellence'
             },
             {
-                id: 'property-kitchen-extension',
-                title: 'Modern Kitchen Extension',
-                description: 'Contemporary kitchen extension with premium finishes, integrated appliances, and seamless garden access.',
-                mainImage: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop',
+                id: 'guesthouse-bathroom-renovation',
+                title: 'Property Bathroom Renovation',
+                description: 'Complete floor installation, painting and new bath.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159685/IMG-20241007-WA0010_fwaoxb.jpg',
                 category: 'Property Excellence'
             },
             {
-                id: 'property-bathroom-renovation',
-                title: 'Luxury Bathroom Renovation',
-                description: 'High-end bathroom renovation with marble finishes, underfloor heating, and custom fixtures.',
-                mainImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop',
+                id: 'property-window-fix',
+                title: 'Property Window Fix',
+                description: 'Property Window Fix.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159686/IMG-20241109-WA0002_lr3yle.jpg',
                 category: 'Property Excellence'
             },
             {
-                id: 'property-loft-conversion',
-                title: 'Contemporary Loft Conversion',
-                description: 'Complete loft conversion creating a master suite with ensuite and dressing area.',
-                mainImage: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop',
+                id: 'guesthouse-bathroom-renovation',
+                title: 'Guesthouse Bathroom Renovation',
+                description: 'Bathroom renovation with new floor, and structural repairs to the roof.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161361/IMG-20250705-WA0328_kvrfpb.jpg',
                 category: 'Property Excellence'
             },
             {
-                id: 'property-garden-office',
-                title: 'Executive Garden Office',
-                description: 'Bespoke garden office with full insulation, electrical systems, and high-speed connectivity.',
-                mainImage: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop',
+                id: 'kitchen-cabinets',
+                title: 'Kitchen Cabinets',
+                description: 'Bespoke kitchen cabinets fit to hide an eyesore water heater and plumbing readjustments.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754162095/IMG-20250711-WA0165_gicmkw.jpg',
                 category: 'Property Excellence'
             },
             {
-                id: 'property-basement-conversion',
-                title: 'Luxury Basement Conversion',
-                description: 'Complete basement transformation into entertainment space with cinema room and wine cellar.',
-                mainImage: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&h=600&fit=crop',
+                id: 'property-kitchen-renovation',
+                title: 'Property Kitchen Renovation',
+                description: 'Property Kitchen Renovation.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159919/IMG-20250624-WA0001_qir6if.jpg',
+                category: 'Property Excellence'
+            },
+            {
+                id: 'shed',
+                title: 'Outdoor Shed',
+                description: 'shed.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159922/IMG-20250620-WA0013_rbwqrd.jpg',
+                category: 'Property Excellence'
+            },
+            {
+                id: 'paint-job',
+                title: 'Paint Job',
+                description: 'Paint Job.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159685/IMG-20241007-WA0011_kbw5b3.jpg',
+                category: 'Property Excellence'
+            },
+            {
+                id: 'storage',
+                title: 'Storage Room',
+                description: 'Paint Job.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161519/IMG-20250711-WA0091_piylaq.jpg',
+                category: 'Property Excellence'
+            },
+            {
+                id: 'plumbing-fix',
+                title: 'WC Plumbing Fix',
+                description: 'WC plumbing.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161519/IMG-20250711-WA0129_g5vuwg.jpg',
+                category: 'Property Excellence'
+            },
+            {
+                id: 'red-toilet',
+                title: 'WC Paint Job',
+                description: 'WC Paint Job.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159684/IMG-20241007-WA0004_yxwedx.jpg',
                 category: 'Property Excellence'
             }
         ];

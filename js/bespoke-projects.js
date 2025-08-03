@@ -18,50 +18,50 @@ class BespokeProjectsPage {
                 id: 'piano-chest',
                 title: 'Piano to Chest Transformation',
                 description: 'When a client brought in her friend\'s childhood piano, Ben transformed it into a handcrafted storage chest using its original pieces. This emotional project showcases the connection between craftsmanship and memory, preserving the piano\'s history while creating something beautiful and functional.',
-                mainImage: './images/03_bespoke/project/thumbnail.png',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159723/IMG-20241207-WA0012_oqxzte.jpg',
                 category: 'Heritage Restoration',
                 featured: true
             },
             {
-                id: 'bespoke-dining-table',
-                title: 'Handcrafted Dining Table',
-                description: 'Custom dining table crafted from premium English oak with traditional mortise and tenon joinery.',
-                mainImage: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop',
+                id: 'ceiling-medallion',
+                title: 'Handpainted Ceiling Medallion',
+                description: 'Ceiling Medallion.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754178190/WhatsApp_Image_2025-08-03_at_12.45.30_AM_1_vohux9.jpg',
                 category: 'Bespoke Craftsmanship'
             },
             {
-                id: 'bespoke-library-shelving',
-                title: 'Built-in Library Shelving',
-                description: 'Floor-to-ceiling library shelving system with integrated lighting and hidden storage compartments.',
-                mainImage: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61?w=800&h=600&fit=crop',
+                id: 'custom-window-build',
+                title: 'Custom Window',
+                description: 'Complete loft conversion creating a master suite with ensuite and dressing area.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161949/IMG-20250711-WA0143_figtpp.jpg',
                 category: 'Bespoke Craftsmanship'
             },
             {
-                id: 'bespoke-wardrobe-system',
-                title: 'Custom Wardrobe System',
-                description: 'Bespoke wardrobe with cedar-lined compartments, soft-close drawers, and integrated LED lighting.',
-                mainImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+                id: 'black-door',
+                title: 'Door Repair & Upgrade',
+                description: 'Door.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754161529/IMG-20250711-WA0183_bwp5ls.jpg',
                 category: 'Bespoke Craftsmanship'
             },
             {
-                id: 'bespoke-kitchen-island',
-                title: 'Artisan Kitchen Island',
-                description: 'Solid wood kitchen island with integrated wine storage, spice racks, and marble work surface.',
-                mainImage: 'https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&h=600&fit=crop',
+                id: 'guitar',
+                title: 'Guitar Project',
+                description: 'Guitar.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159710/IMG-20250311-WA0002_xda9zw.jpg',
                 category: 'Bespoke Craftsmanship'
             },
             {
-                id: 'bespoke-floating-shelves',
-                title: 'Floating Display Shelves',
-                description: 'Minimalist floating shelves with invisible brackets and integrated cable management.',
-                mainImage: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop',
+                id: 'sanding-job',
+                title: 'Door Restoration',
+                description: 'Solid wood Door restoration.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754159726/IMG-20250531-WA0007_skn1fx.jpg',
                 category: 'Bespoke Craftsmanship'
             },
             {
-                id: 'bespoke-antique-restoration',
-                title: 'Antique Chest Restoration',
-                description: 'Meticulous restoration of 18th-century chest using period-appropriate techniques and materials.',
-                mainImage: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop',
+                id: 'vertical-storage',
+                title: 'Vertical Storage',
+                description: 'Vertical Storage.',
+                mainImage: 'https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754162098/IMG-20250711-WA0195_ujqexw.jpg',
                 category: 'Bespoke Craftsmanship'
             }
         ];

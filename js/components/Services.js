@@ -44,7 +44,7 @@ export default class Services {
                 title: "Custom Woodwork",
                 number: "03",
                 description: "Handcrafted woodwork tailored to individual needs, from custom storage solutions to kitchen cabinetry. Each piece is designed and built with precision and attention to detail.",
-                image: "./images/03_bespoke/top-deck/cropped-top-deck.jpeg",
+                image: "./images/03_bespoke/top-deck/cropped-top-deck.jpg",
                 intro: "Handcrafted furniture and storage solutions designed for lifetime durability.",
                 features: [
                     "Custom Furniture Design",
