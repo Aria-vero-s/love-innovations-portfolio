@@ -36,7 +36,7 @@ export const flightProject = {
       key: "extension",
       title: "Bigger & Stronger",
       contentHtml: `
-        <p><strong>Date:</strong> <time datetime="2020-01-01">2020</time></p>
+        <p><strong>Date:</strong> <time datetime="2020-01-01">January, 2020</time></p>
         <p>By early 2020, <em>Structural repairs were no longer optional</em>. He tore out the crumbling walls and rebuilt them from scratch — but instead of simply replacing what was there, he reimagined the space entirely.</p>
 
         <p>The centre cockpit, once open, became an enclosed room with solid walls and a roof. The doors? They didn’t swing out but swung up, like the DeLorean in Back to the Future.</p>
