@@ -218,7 +218,7 @@ export const flightProject = {
         <p>Inside, however, the years of leaks had left their mark. In the bedroom, some of the wood had rotted from water damage. So Ben did what he always does: <strong>cut out, fiberglass, sand</strong>… repeat. Sometimes, the inside of the boat became coated in white dust like a snowstorm had hit.</p>
     
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
-          “It looked like it had snowed inside. Nope. Just me.” — Ben
+          “Sometimes I would make my bed on the floor because the inside looked like a construction site.” — Ben
         </blockquote>
     
         <p>The end was finally in sight. But the dust wasn’t done with him yet.</p>
