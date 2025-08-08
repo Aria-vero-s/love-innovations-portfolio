@@ -133,12 +133,11 @@ export const flightProject = {
       contentHtml: `
         <p><strong>Date:</strong> <time datetime="2022-01-01">February, 2022</time></p>
 
-        <p>By 2022, the inside of Flight finally looked <strong>lived in</strong>.</p>
-        <p>The kitchen had become part of Ben’s daily rhythm — always stocked with tea, honey, and a pan on the stove. The bedroom shelves were filled with his things. Art hung on the walls. The boat was no longer just a build — it was his home.</p>
+        <p>By 2022, the inside of Flight finally looked <strong>lived in</strong>. The kitchen had become part of Ben’s daily rhythm — always stocked with tea, honey, and a pan on the stove. The bedroom shelves were filled with his things. Art hung on the walls. The boat was no longer just a build — it was his home.</p>
 
-        <p>But what about the bathroom? That’s because, until now, there wasn’t much to mention: just a basic <strong>portable toilet</strong>, and Ben took his showers at the gym.</p>
+        <p>But what about the bathroom? That’s because, until now, there wasn’t much to mention: it only consisted of a <strong>portable toilet</strong>, and Ben took his showers at the gym.</p>
 
-        <p>This year, that changed. He decided to waterproof the bathroom and build a proper shower — custom-shaped to fit the tiny space. The base was hand-sculpted using fiberglass and hardened plastic, molded into a perfect fit. Simple, but clever. And very Ben.</p>
+        <p>This year, that changed. He decided to waterproof the bathroom and build a proper shower — custom-shaped to fit the tiny space. The base was hand-made using fiberglass and hardened plastic, molded into a perfect fit. Simple, but clever. And very Ben.</p>
 
         <p>Meanwhile, disaster was creeping in... Remember the gold paint from 2021? Well, it didn’t age well. The sun baked it, the heat cracked it, and soon it began peeling off in wide strips. Water seeped through. The boat began leaking… again.</p>
 
