@@ -216,7 +216,7 @@ export const flightProject = {
     
         <p>Ben also made a bold decision: to wrap the exterior of the cockpit extension in <strong>carbon fibre</strong> — giving the boat a sleek, modern contrast to its vintage wood and quirky design.</p>
     
-        <p>Inside, however, the years of leaks had left their mark. In the bedroom, some of the wood had rotted from water damage. So Ben did what he always does: <strong>cut out, fiberglass, sand</strong>… repeat. Sometimes, the inside of the boat became coated in white fiberglass & saw dust like a snowstorm had hit.</p>
+        <p>Inside, however, the years of leaks had left their mark. In the bedroom, some of the wood had rotted from water damage. So Ben did what he always does: <strong>cut out, fiberglass, sand</strong>… repeat. Sometimes, the inside of the boat became coated in white fiberglass & sawdust like a snowstorm had hit.</p>
     
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
           “Sometimes I would make my bed on the floor because the inside looked like a construction site.” — Ben
