@@ -556,7 +556,7 @@ textarea:focus {
   right: 1rem;
 }
 #image-modal button i {
-  stroke: #fff;
+  stroke: #ffffff;
   opacity: 0.8;
 }
 #image-modal button:hover i {

@@ -181,7 +181,7 @@ export const flightProject = {
         <p>He built the dashboard by hand, forming custom curves and mounting panels that resembled a glove box and console. There was even a <strong>built-in iPad holder</strong> for music while cruising — plus a whole row of light switches that, in true Ben fashion, didn’t actually do anything yet. The boat uses a simple outboard motor with a wheel connection — no ignition panel needed. But hey, the switches look cool.</p>
     
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
-          “It’s all fake. But it feels like a spaceship.” — Ben
+          “My boat now feels like a spaceship.” — Ben
         </blockquote>
     
         <p>More sanding. More shaping. More little exterior touch-ups, as always. The transformation kept creeping forward.</p>
