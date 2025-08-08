@@ -51,7 +51,7 @@ export const flightProject = {
 
         <p>But the biggest change was yet to come: <em>an extension</em>. Using two barrels strapped to the back for buoyancy, Ben built a raised platform. At first, it looked like a box with railings — but it soon evolved into a <em>new steering cabin</em>. He repurposed the back window as a <em>windshield</em>, added two small round portholes, and cut in a flap for air. A second little room was born.</p>
 
-        <p>By the end of the year, Flight looked… experimental. A little like papier-mâché.</p>
+        <p>By the end of the year, Flight looked… experimental. A little like paper-mâché.</p>
 
         <p>But it was growing. And most importantly — it was home.</p>
       `,
@@ -141,7 +141,7 @@ export const flightProject = {
 
         <p>Meanwhile, disaster was creeping in... Remember the gold paint from 2021? Well, it didn’t age well. The sun baked it, the heat cracked it, and soon it began peeling off in wide strips. Water seeped through. The boat began leaking… again.</p>
 
-        <p>Ben stripped back the gold layer, filled the cracks with fiberglass putty, and sanded endlessly. The surface dried into stiff, spiky peaks. Flight looked like papier-mâché. Again.</p>
+        <p>Ben stripped back the gold layer, filled the cracks with fiberglass putty, and sanded endlessly. The surface dried into stiff, spiky peaks. Flight looked like paper-mâché. Again.</p>
 
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
           “You think you’re nearly done, and suddenly it’s back to bare bones. But that’s boats for you.” — Ben
