@@ -179,7 +179,7 @@ export const flightProject = {
     
         <p>Using a technique he'd never tried before — layering <strong>fabric and resin</strong> — Ben began sculpting the walls into smooth, curved surfaces that looked more like the molded interior of a vintage car than a boat cabin. It was a nod to his other passion: cars.</p>
     
-        <p>He built the dashboard by hand, forming custom curves and mounting panels that resembled a glove box and console. There was even a <strong>built-in iPad holder</strong> for music while cruising — plus a whole row of light switches that, in true Ben fashion, didn’t actually do anything yet. The boat uses a simple outboard motor with a wheel connection — no ignition panel needed. But hey, the switches look cool.</p>
+        <p>He built the dashboard by hand, forming custom curves and mounting panels that resembled a glove box and console. There was even a <strong>built-in iPad holder</strong> for music while cruising — plus a whole row of light switches (that didn’t actually do anything yet). The boat uses a simple outboard motor with a wheel connection — no ignition panel needed. But hey, the switches look cool.</p>
     
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
           “My boat now feels like a spaceship.” — Ben
