@@ -90,7 +90,7 @@ export const flightProject = {
           “Flight is teaching me that patience and persistence aren't the same thing. Patience is waiting for the perfect weather to work on leak repairs. Persistence is working on them anyway because the forecast shows rain for the next two weeks.” — Ben
         </blockquote>
 
-        <p>The rear extension was finally starting to look like it had always been part of Flight. <strong>Flushed doors</strong>, seamless siding, and a new coat of paint along the bottom helped the structure blend in. Inside, the <strong>new flooring</strong> was finished — and with a few leftover wood slats, Ben built matching <strong>indoor steps</strong> to climb up into the main space.</p>
+        <p>The rear extension was finally starting to look like it had always been part of Flight. <strong>Flushed doors</strong>, seamless siding, and a new coat of paint along the bottom helped the structure blend in. Inside, the <strong>new flooring</strong> was finished — and with a few leftover wood slats, Ben built matching <strong>indoor steps</strong> to climb in/out of the boat.</p>
 
         <p>The fireplace was <em>shifted slightly</em> to improve the flow of the room. In the bedroom, Ben added a <em>built-in desk and storage</em>. The kitchen got a serious upgrade: a <strong>new countertop, sink</strong>, continued <strong>flooring</strong>, <strong>benches</strong>, and a small <strong>dining table</strong>. Wood trims were added to the ceiling, tying the interior together.</p>
 
