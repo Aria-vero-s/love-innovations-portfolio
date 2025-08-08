@@ -47,7 +47,7 @@ export const flightProject = {
         
         <p><em>By May, COVID had arrived in London</em>. Streets were quiet. No one quite knew what was coming. Ben quietly stocked up on nonperishable food — <i>just in case</i> — and kept building.</p>
 
-        <p>With the cockpit sealed, he turned inward. Since the floor had been raised awkwardly over the hull, he lowered it to create enough headspace to stand tall. Then came the rear cabin — rotten roof out, clean timber in.</p>
+        <p>With the cockpit sealed, he turned inward. Since the floor were built over the bilge, he lowered it to create enough headspace to stand tall. Then came the rear cabin — rotten roof out, clean timber in.</p>
 
         <p>But the biggest change was yet to come: <em>an extension</em>. Using two barrels strapped to the back for buoyancy, Ben built a raised platform. At first, it looked like a box with railings — but it soon evolved into a <em>new steering cabin</em>. He repurposed the back window as a <em>windshield</em>, added two small round portholes, and cut in a flap for air. A second little room was born.</p>
 
