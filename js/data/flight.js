@@ -175,9 +175,7 @@ export const flightProject = {
       contentHtml: `
         <p><strong>Date:</strong> <time datetime="2023-02-13">February, 2023</time></p>
 
-        <p>By 2023, one area remained mostly unfinished: <strong>the cockpit extension interior</strong>.</p>
-    
-        <p>That changed this year, starting with full <em>insulation and painting</em>. But Ben didn’t stop at making it liveable — he made it <em>drivable</em>. Or at least, it looked that way.</p>
+        <p>By 2023, one area remained mostly unfinished: <strong>the cockpit extension interior</strong>. That changed this year, starting with full <em>insulation and painting</em>. But Ben didn’t stop at making it liveable — he made it <em>drivable</em>.</p>
     
         <p>Using a technique he'd never tried before — layering <strong>fabric and resin</strong> — Ben began sculpting the walls into smooth, curved surfaces that looked more like the molded interior of a vintage car than a boat cabin. It was a nod to his other passion: cars.</p>
     
