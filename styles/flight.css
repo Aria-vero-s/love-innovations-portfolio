@@ -89,7 +89,7 @@
     max-width: 90vw;
     max-height: 90vh;
     border-radius: 0.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   }
   
   /* Prev/Next buttons */
@@ -102,12 +102,13 @@
     border: none;
     padding: 0.5rem;
     cursor: pointer;
+    color: #fff;
   }
   #modal-prev { left: 1rem; }
   #modal-next { right: 1rem; }
   #modal-prev i,
   #modal-next i {
-    color: #fff;
+    color: #ffffff;
     width: 2rem;
     height: 2rem;
   }
