@@ -40,7 +40,7 @@ export default class FeaturedFlight {
                   id="flight-cta-btn"
                   class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 tracking-wide transition-all duration-300 hover:shadow-lg"
                 >
-                  View Flight Story
+                  Read Flight's Story
                 </button>
               </div>
             </div>
