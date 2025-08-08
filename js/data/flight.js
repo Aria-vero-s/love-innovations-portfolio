@@ -170,6 +170,8 @@ export const flightProject = {
       key: "2023",
       title: "The Dream Cockpit",
       contentHtml: `
+        <p><strong>Date:</strong> <time datetime="2023-02-13">February, 2023</time></p>
+
         <p>By 2023, one area remained mostly unfinished: <strong>the cockpit extension interior</strong>.</p>
     
         <p>That changed this year, starting with full <em>insulation and painting</em>. But Ben didn’t stop at making it liveable — he made it <em>drivable</em>. Or at least, it looked that way.</p>
@@ -203,6 +205,8 @@ export const flightProject = {
       key: "2024",
       title: "Carbon Fibre",
       contentHtml: `
+        <p><strong>Date:</strong> <time datetime="2021-01-01">July, 2024</time></p>
+
         <p>By 2024, most of the boat was watertight. The last persistent roof leaks were nearly gone — and while the <em>gold paint</em> damage still needed sorting, the sheer amount of <strong>fiberglass and structural reinforcement</strong> Ben had added by now would probably outlast him.</p>
     
         <p>Instead of removing the original <strong>paddle holders</strong> on the roof — relics from who-knows-when — Ben decided to keep them. He repaired them with fresh fiberglass, sanded them smooth, and preserved them as a nod to the boat’s past.</p>
@@ -239,6 +243,8 @@ export const flightProject = {
       key: "2025",
       title: "Nearly There",
       contentHtml: `
+        <p><strong>Date:</strong> <time datetime="2025-01-06">January, 2025</time></p>
+
         <p>It’s 2025, and the bedroom is now <strong>completely dry</strong>, and most of the boat has finally shed its leaks. Only a few small drips remain around the kitchen.</p>
     
         <p>The <strong>kitchen counter</strong> was redesigned and rebuilt yet again, this time slimmer, with more efficient <strong>under-counter storage</strong> to open up the space.</p>
