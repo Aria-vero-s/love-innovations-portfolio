@@ -32,7 +32,7 @@ class FlightPage {
           ${sec.contentHtml}
         </div>
 
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-7xl mx-auto">
           <!-- main -->
           <div class="animate-on-scroll delay-300 mb-4">
             <div class="aspect-video overflow-hidden bg-muted">
