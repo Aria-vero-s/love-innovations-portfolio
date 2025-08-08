@@ -3,7 +3,7 @@
 export const flightProject = {
   id: "flight",
   title: "Project Flight",
-  landingImage: "./images/before-after.png",
+  landingImage: "./images/before-after.jpg",
   sections: [
     {
       key: "beginning",

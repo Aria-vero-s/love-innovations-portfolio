@@ -11,7 +11,7 @@ export default class FeaturedFlight {
         id: 'flight',
         title: 'Project Flight',
         teaser: 'Follow the full restoration and transformation of “Flight,” from hull redesign to bespoke interior fit-outs—each section tells a new chapter of this epic boat-to-art journey.',
-        image: './images/before-after.png',    // your before/after landing image
+        image: './images/before-after.jpg',    // your before/after landing image
         link: 'flight.html'
       };
   
