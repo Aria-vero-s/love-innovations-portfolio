@@ -254,6 +254,8 @@ export const flightProject = {
         </blockquote>
     
         <p>There’s more to come. Interior storage, maybe even <strong>hot water</strong> one day. Extra power. New systems. But for now, the boat is home — and it's beautiful.</p>
+
+        <h1>Thank you for reading!</h1>
       `,
       images: [
         "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754563552/01_houseboats/flight/2025-02-22_14-32-58_20250222_143258.jpg.jpg",
