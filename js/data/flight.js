@@ -254,7 +254,7 @@ export const flightProject = {
     
         <p>The <strong>carbon fibre wrap</strong> now fully encircles the cockpit extension, and the back flap has been fitted with a <strong>screen door</strong> to keep the bugs out while still letting the breeze in.</p>
     
-        <p>From the outside, the once-mismatched materials are now replaced with <em>clean lines, continuous trim, and molded surfaces</em>. The cleat mounts, the joins, the curves — all feel strong and deliberate. There’s no more paper-mâché patchwork. It’s solid work.</p>
+        <p>From the outside, the once-mismatched areas are now replaced with <em>clean lines, continuous trim, and molded surfaces</em>. The cleat mounts, the joins, the curves — all feel strong and deliberate. There’s no more paper-mâché patchwork. It’s solid work.</p>
     
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
           “Somewhere along the way, Flight stopped being a project and started being a companion. That's the real story of Flight—not just the transformation of a forgotten boat, but true connection in a world that often feels disposable.” — Ben
