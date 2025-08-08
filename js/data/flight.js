@@ -42,7 +42,7 @@ export const flightProject = {
         <p>The centre cockpit, once open, became an enclosed room with solid walls and a roof. The doors? They didn’t swing out but swung up, like the DeLorean in Back to the Future.</p>
         
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
-          “Why not do it in style?” — Doc Brown and apparently, Ben.
+          “Why not do it with some style?” — Doc Brown and apparently, Ben.
         </blockquote>
         
         <p><em>By May, COVID had arrived in London</em>. Streets were quiet. No one quite knew what was coming. Ben quietly stocked up on nonperishable food — <i>just in case</i> — and kept building.</p>
