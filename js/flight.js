@@ -60,6 +60,7 @@ class FlightPage {
           </div>
         </div>
       </section>
+      <h1 class="mt-10" style="text-align:center;">Thank you for reading! More coming soon.</h1>
     `).join("");
 
     this.bindThumbnails();
