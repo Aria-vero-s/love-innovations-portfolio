@@ -86,6 +86,10 @@ export const flightProject = {
 
         <p>The windows, still <em>prone to leaking</em>, went through another round of restoration — an ongoing saga that would haunt the boat again and again.</p>
 
+        <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
+          “Flight is teaching me that patience and persistence aren't the same thing. Patience is waiting for the perfect weather to work on leak repairs. Persistence is working on them anyway because the forecast shows rain for the next two weeks.” — Ben
+        </blockquote>
+
         <p>The rear extension was finally starting to look like it had always been part of Flight. <strong>Flushed doors</strong>, seamless siding, and a new coat of paint along the bottom helped the structure blend in. Inside, the <strong>new flooring</strong> was finished — and with a few leftover wood slats, Ben built matching <strong>indoor steps</strong> to climb up into the main space.</p>
 
         <p>The fireplace was <em>shifted slightly</em> to improve the flow of the room. In the bedroom, Ben added a <em>built-in desk and storage</em>. The kitchen got a serious upgrade: a <strong>new countertop, sink</strong>, continued <strong>flooring</strong>, <strong>benches</strong>, and a small <strong>dining table</strong>. Wood trims were added to the ceiling, tying the interior together.</p>
@@ -241,7 +245,7 @@ export const flightProject = {
     },    
     {
       key: "2025",
-      title: "Nearly There",
+      title: "A Companion",
       contentHtml: `
         <p><strong>Date:</strong> <time datetime="2025-01-06">January, 2025</time></p>
 
@@ -256,7 +260,7 @@ export const flightProject = {
         <p>From the outside, the once-mismatched materials are now replaced with <em>clean lines, continuous trim, and molded surfaces</em>. The cleat mounts, the joins, the curves — all feel strong and deliberate. There’s no more paper-mâché patchwork. It’s solid work.</p>
     
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
-          “It’s not done. But I am proud to call this mine.” — Ben
+          “Somewhere along the way, Flight stopped being a project and started being a companion. That's the real story of Flight—not just the transformation of a forgotten boat, but true connection in a world that often feels disposable.” — Ben
         </blockquote>
     
         <p>There’s more to come. Interior storage, maybe even <strong>hot water</strong> one day. Extra power. New systems. But for now, the boat is home — and it's beautiful.</p>
