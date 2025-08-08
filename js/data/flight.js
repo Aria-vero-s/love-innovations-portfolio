@@ -215,13 +215,13 @@ export const flightProject = {
     
         <p>Ben also made a bold decision: to wrap the exterior of the cockpit extension in <strong>carbon fibre</strong> — giving the boat a sleek, modern contrast to its vintage wood and quirky design.</p>
     
-        <p>Inside, however, the years of leaks had left their mark. In the bedroom, some of the wood had rotted from water damage. So Ben did what he always does: <strong>cut out, fiberglass, sand</strong>… repeat. Sometimes, the inside of the boat became coated in white dust like a snowstorm had hit.</p>
+        <p>Inside, however, the years of leaks had left their mark. In the bedroom, some of the wood had rotted from water damage. So Ben did what he always does: <strong>cut out, fiberglass, sand</strong>… repeat. Sometimes, the inside of the boat became coated in white fiberglass & saw dust like a snowstorm had hit.</p>
     
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
           “Sometimes I would make my bed on the floor because the inside looked like a construction site.” — Ben
         </blockquote>
     
-        <p>The end was finally in sight. But the dust wasn’t done with him yet.</p>
+        <p>But the sawdust wasn’t done with him yet.</p>
       `,
       images: [
         "https://res.cloudinary.com/dbb4fkwfx/image/upload/v1754564430/01_houseboats/flight/2024-01-12_14-44-02_20240112_144402.jpg.jpg",
@@ -256,10 +256,11 @@ export const flightProject = {
         <p>From the outside, the once-mismatched materials are now replaced with <em>clean lines, continuous trim, and molded surfaces</em>. The cleat mounts, the joins, the curves — all feel strong and deliberate. There’s no more paper-mâché patchwork. It’s solid work.</p>
     
         <blockquote class="border-l-4 pl-4 italic text-muted-foreground">
-          “It’s not done. But now, it finally feels like it’s mine.” — Ben
+          “It’s not done. But I am proud to call this mine.” — Ben
         </blockquote>
     
         <p>There’s more to come. Interior storage, maybe even <strong>hot water</strong> one day. Extra power. New systems. But for now, the boat is home — and it's beautiful.</p>
+        <p>Today, Ben can be found cruising along the canal in London and he now aspire to design and build more boats for others.</p>
 
         <h1>Thank you for reading!</h1>
       `,
