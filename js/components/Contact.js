@@ -39,7 +39,7 @@ export default class Contact {
                                     <i data-lucide="mail" class="w-5 h-5 text-orange-500"></i>
                                 </div>
                                 <div class="space-y-1">
-                                    <div class="text-muted-foreground">info@loveinnovations.co.uk</div>
+                                    <div class="text-muted-foreground">(via contact form)</div>
                                     <div class="text-sm text-muted-foreground">Response within 24 hours</div>
                                 </div>
                             </div>
