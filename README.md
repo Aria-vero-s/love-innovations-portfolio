@@ -6,8 +6,9 @@ A portfolio website for a multi-skilled engineer specializing in houseboat maint
 
 ## Live Preview
 
-> _Domain Link Coming soon..._  
-[live link](https://aria-vero-s.github.io/love-innovations-portfolio/)
+The site is now **live** at the custom domain, deployed via **Vercel** and connected through **IONOS**:
+
+[https://www.love-innovations.com](https://www.love-innovations.com)
 
 To deploy locally, follow the instructions below.
 
