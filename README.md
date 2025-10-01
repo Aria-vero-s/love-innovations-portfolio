@@ -55,7 +55,7 @@ To deploy locally, follow the instructions below.
 │   ├── 02_property/
 │   ├── 03_bespoke/
 │   └── profile.jpg, flight2.jpeg
-└── templates/
+└── README.md
 ```
 
 ---
@@ -103,8 +103,7 @@ The design behind this project is clean, minimal, and modern with subtle interac
 
 ## Future Improvements
 
-- Add before/after feature
-- CMS or static site generator integration (e.g., Eleventy)
+- Add before/after slider feature
 - SEO and meta tag optimization
 
 ---
