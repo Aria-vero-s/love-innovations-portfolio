@@ -10,7 +10,11 @@ export const flightProject = {
       title: "Take Off",
       contentHtml: `
         <p><strong>Date:</strong> <time datetime="2019-08-12">August 12, 2019</time></p>
-        <p>In the summer of 2019, Ben bought a narrowboat in London. It was old, tired, and full of mystery: no builder’s plate, no clear history. A centre-cockpit design with doors fore and aft, an aft kitchen and sleeping area, and a forward saloon that may once have been used for cargo. Most of the hull had been reinforced with fibreglass, but the structure was still largely wood — and time had not been kind to it. It had only one clue to its past: a name; <strong>Flight</strong>.</p>
+        <p>In the summer of 2019, Ben bought a 1960s Dobsons river cruiser from the Norfolk Broads. She was old, elegant, and tired — a centre-cockpit wooden boat with an aft galley, sleeping cabin, and forward saloon once meant for quiet river days. Her bottom was fibreglass, while the top remained wood, weathered by time. There was a name on her side : Flight.</p>
+
+<p>She had once belonged to Rocket Ron, a spirited boater with a string of misfortunes. One evening, a leaking gas pipe met the flame of his cigarette, blasting him out of the boat. A lock keeper, Pete, saved him by throwing him into the canal. Ron survived but later broke his leg, ending his boating days. Flight was left abandoned for six years.</p>
+
+<p>When Ben found her during a soul-searching trip through the countryside, he struck a deal with Ron. Still fond of the old boat, Ron felt relieved to see her go to someone who would care for her.</p>
 
         <p>At the time, he had a steady engineering job — but the routine was draining him.</p>
         
